@@ -46,6 +46,8 @@ router.post('/alert', function(req, res, next) {
         next(null);
     });
 
+    res.send(200);
+
     res.redirect('/');
 });
 
