@@ -4,7 +4,7 @@
 
 var config = {};
 
-config.mongoUri = 'mongodb://localhost:27017/communitycloud';
+config.mongoUri = 'mongodb://heroku_ddnx13r9:cusnakpmco74rpi1hpva72a72r@ds035674.mongolab.com:35674/heroku_ddnx13r9';
 
 config.cookieMaxAge = 90 * 24 * 3600 * 1000;
 
