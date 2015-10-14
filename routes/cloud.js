@@ -64,6 +64,16 @@ router.post('/receiveEvent', function(req,res,next){
         created: Date.now()
     });
 
+    newEvent.save(function (err) {
+        if(err){
+            console.log(err);
+            return next(err);
+        }
+        next(null);
+    });
+
+    res.sendStatus(200);
+
 
 });
 
