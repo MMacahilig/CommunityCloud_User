@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-
 var eventSchema = new Schema({
     alertType: String,
     details: String,
@@ -11,8 +10,6 @@ var eventSchema = new Schema({
     createdId: Schema.ObjectId,
     created: {type: Date, Default: Date.now()}
 });
-
-
 
 
 var Event = mongoose.model('Event', eventSchema);

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Event = require('../models/event.js').Event;
+var Event = require('../models/Event').Event;
 var Alert = require('../models/alert').Alert;
 var User = require('../models/user').User;
 
