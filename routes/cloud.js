@@ -67,7 +67,7 @@ router.post('/receiveEvent', function(req,res,next){
 
 
     var newEvent = new Event({
-        alertType: req.body.AlertType,
+        alertType: req.body.alertType,
         details: req.body.details,
         location: req.body.location,
         rating: req.body.rating,
