@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var Alert = require('../models/alert').Alert;
 var Event = require('../models/event').Event;
+var Alert = require('../models/alert').Alert;
 var User = require('../models/user').User;
 
 var restrict = require('../auth/restrict');
