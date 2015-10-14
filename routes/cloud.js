@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Event = require('../models/event').Event;
+//var Event = require('../models/event').Event;
 var Alert = require('../models/alert').Alert;
 var User = require('../models/user').User;
 
@@ -53,7 +53,8 @@ router.post('/alert', function(req, res, next) {
 });
 
 router.post('/receiveEvent', function(req,res,next){
-    var newEvent = new Event({
+
+   /* var newEvent = new Event({
         alertType: req.body.AlertType,
         details: req.body.details,
         location: req.body.location,
@@ -62,7 +63,7 @@ router.post('/receiveEvent', function(req,res,next){
         createdId: req.body.createdId,
         created: Date.now()
     });
-
+*/
 
 });
 
@@ -100,10 +101,10 @@ router.delete('/deleteAlerts', function(req, res, next) {
 });
 
 router.get('/getAlerts', function(req,res,next){
-    Event.find(function(err, alert) {
+    /*Event.find(function(err, alert) {
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(alert));
-    });
+    });*/
 });
 
 
