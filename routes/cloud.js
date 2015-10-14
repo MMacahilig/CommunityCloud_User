@@ -15,7 +15,7 @@ router.get('/', restrict, function(req, res, next) {
     var dateString = startDate.getDate() + "/" + startDate.getMonth() + "/" + startDate.getYear();
     //var dateString = startDate.getDate() + "/" + (startDate.getMonth()+1) + "/" + startDate.getYear();
     //console.log(dateString);
-    Alert.find().lean().exec(function(err, alert) {
+    Event.find().lean().exec(function(err, alert) {
         var vm = {
             firstName : req.user.firstName,
             lastName : req.user.lastName,
@@ -54,7 +54,7 @@ router.post('/alert', function(req, res, next) {
 
 router.post('/receiveEvent', function(req,res,next){
 
-   /* var newEvent = new Event({
+   var newEvent = new Event({
         alertType: req.body.AlertType,
         details: req.body.details,
         location: req.body.location,
@@ -63,7 +63,7 @@ router.post('/receiveEvent', function(req,res,next){
         createdId: req.body.createdId,
         created: Date.now()
     });
-*/
+
 
 });
 
@@ -101,10 +101,10 @@ router.delete('/deleteAlerts', function(req, res, next) {
 });
 
 router.get('/getAlerts', function(req,res,next){
-    /*Event.find(function(err, alert) {
+    Event.find(function(err, alert) {
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(alert));
-    });*/
+    });
 });
 
 
