@@ -56,7 +56,6 @@
             console.log("SENT!");
             console.log("Before Reload");
             location.reload();
-            console.log("Reload");
         });
 
 
