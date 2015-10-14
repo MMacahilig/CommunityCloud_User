@@ -15,7 +15,7 @@ router.get('/', restrict, function(req, res, next) {
     var dateString = startDate.getDate() + "/" + startDate.getMonth() + "/" + startDate.getYear();
     //var dateString = startDate.getDate() + "/" + (startDate.getMonth()+1) + "/" + startDate.getYear();
     //console.log(dateString);
-    Event.find().lean().exec(function(err, alert) {
+    Alert.find().lean().exec(function(err, alert) {
         var vm = {
             firstName : req.user.firstName,
             lastName : req.user.lastName,
