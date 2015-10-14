@@ -101,10 +101,15 @@ router.delete('/deleteAlerts', function(req, res, next) {
 });
 
 router.get('/getAlerts', function(req,res,next){
-    Event.find(function(err, alert) {
+
+   /* Event.find(function(err, alert) {
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(alert));
+    });*/
+    Event.find(function(err,alert) {
+       res.send(alert);
     });
+
 });
 
 
