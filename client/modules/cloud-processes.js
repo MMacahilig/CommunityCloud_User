@@ -3,7 +3,7 @@
     $("#delete").click(function() {
         console.log("clicked");
         $.ajax({
-            url: "http://communitycloud.herokuapp.com/cloud/deleteAlerts",
+            url: "hhttp://emergencyservicecloud.herokuapp.com/cloud/deleteAlerts",
             type: "DELETE",
 
         }).done(function(){
@@ -23,7 +23,7 @@
         console.log(userName);
 
         $.ajax({
-            url:"http://emergencyservicecloud.herokuapp.com/cloud/event",
+            url:"http://communitycloud.herokuapp.com/cloud/alert",
             type: "POST",
             data: {
                 alertType: AlertType,
