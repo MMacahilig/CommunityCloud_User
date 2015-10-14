@@ -53,7 +53,7 @@ router.post('/alert', function(req, res, next) {
 });
 
 router.post('/receiveEvent', function(req,res,next){
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com/');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -119,7 +119,7 @@ router.post('/mobileAlert', function(req, res, next) {
 
 router.delete('/deleteAlerts', function(req, res, next) {
     console.log("trigger");
-    Alert.remove({},function(){console.log("Deleted Alerts");});
+    Event.remove({},function(){console.log("Deleted Alerts");});
 });
 
 router.get('/getAlerts', function(req,res,next){
