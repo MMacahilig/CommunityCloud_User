@@ -53,7 +53,7 @@ router.post('/alert', function(req, res, next) {
 });
 
 router.post('/receiveEvent', function(req,res,next){
-    res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com/');
+    res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
