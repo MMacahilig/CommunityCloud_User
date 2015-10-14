@@ -123,7 +123,7 @@ router.delete('/deleteAlerts', function(req, res, next) {
     Event.remove({},function(){console.log("Deleted Alerts");});
 });
 
-router.get('/getAlerts', function(req,res,next){
+router.get('/getEvents', function(req,res,next){
 
    Event.find(function(err, alert) {
         res.setHeader('Content-Type', 'application/json');
