@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Alert = require('../models/alert').Alert;
+var Event = require('../models/event').Event;
 var User = require('../models/user').User;
 
 var restrict = require('../auth/restrict');
@@ -46,9 +47,23 @@ router.post('/alert', function(req, res, next) {
         next(null);
     });
 
-    res.send(200);
+    res.sendStatus(200);
 
     res.redirect('/');
+});
+
+router.post('/receiveEvent', function(req,res,next){
+    var newEvent = new Event({
+        alertType: req.body.AlertType,
+        details: req.body.details,
+        location: req.body.location,
+        rating: req.body.rating,
+        createdBy: req.body.createdBy,
+        createdId: req.body.createdId,
+        created: Date.now()
+    });
+
+
 });
 
 router.post('/mobileAlert', function(req, res, next) {
@@ -85,7 +100,7 @@ router.delete('/deleteAlerts', function(req, res, next) {
 });
 
 router.get('/getAlerts', function(req,res,next){
-    Alert.find(function(err, alert) {
+    Event.find(function(err, alert) {
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(alert));
     });
