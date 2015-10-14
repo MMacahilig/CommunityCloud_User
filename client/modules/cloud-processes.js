@@ -38,7 +38,7 @@
         });
 
         $.ajax({
-            url:"http://communitycloud.herokuapp.com/cloud/receiveAlert",
+            url:"http://emergencyservicecloud.herokuapp.com/cloud/receiveAlert",
             type: "POST",
             crossDomain: true,
             xhrFields: {
