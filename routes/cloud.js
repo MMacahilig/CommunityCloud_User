@@ -19,6 +19,7 @@ router.get('/', restrict, function(req, res, next) {
         var vm = {
             firstName : req.user.firstName,
             lastName : req.user.lastName,
+            id: req.user._id,
             alert: alert,
             created: dateString
         };
