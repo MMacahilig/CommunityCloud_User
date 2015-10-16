@@ -1,6 +1,18 @@
 
 
-    $("#delete").click(function() {
+    $("#deleteEvents").click(function() {
+        console.log("clicked");
+        $.ajax({
+            url: "http://communitycloud.herokuapp.com/cloud/deleteEvents",
+            type: "DELETE",
+
+        }).done(function(){
+            console.log("DELETED");
+            location.reload();
+        });
+    });
+
+    $("#deleteAlerts").click(function() {
         console.log("clicked");
         $.ajax({
             url: "http://communitycloud.herokuapp.com/cloud/deleteAlerts",
@@ -11,7 +23,6 @@
             location.reload();
         });
     });
-
     $("#sendAlert").click(function(){
         //console.log("Event Sent");
         var AlertType = $("#alertType").val();
