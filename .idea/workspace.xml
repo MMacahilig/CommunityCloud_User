@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44d080e1-c248-4e18-b0fc-5fa6799b8878" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/alert.js" afterPath="$PROJECT_DIR$/models/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/modules/cloud-processes.js" afterPath="$PROJECT_DIR$/client/modules/cloud-processes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/cloud.js" afterPath="$PROJECT_DIR$/routes/cloud.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/main.min.js" afterPath="$PROJECT_DIR$/public/javascripts/main.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cloud.hbs" afterPath="$PROJECT_DIR$/views/cloud.hbs" />
     </list>
     <ignored path="Heroku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cloud.hbs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cloud.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="268" column="44" selection-start-line="268" selection-start-column="44" selection-end-line="268" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.3438202">
+              <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -52,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/routes/cloud.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cloud-processes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cloud-processes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/modules/cloud-processes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15991472">
-              <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -121,10 +117,10 @@
         <option value="$PROJECT_DIR$/models/Events.js" />
         <option value="$PROJECT_DIR$/models/event.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/cloud.hbs" />
         <option value="$PROJECT_DIR$/models/alert.js" />
         <option value="$PROJECT_DIR$/routes/cloud.js" />
         <option value="$PROJECT_DIR$/client/modules/cloud-processes.js" />
+        <option value="$PROJECT_DIR$/views/cloud.hbs" />
       </list>
     </option>
   </component>
@@ -549,12 +545,12 @@
       <workItem from="1444782793077" duration="5895000" />
       <workItem from="1444817046027" duration="3375000" />
       <workItem from="1444861353474" duration="1340000" />
-      <workItem from="1444970775346" duration="122000" />
+      <workItem from="1444970775346" duration="346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10853000" />
+    <option name="totallyTimeSpent" value="11077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -777,14 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="268" column="44" selection-start-line="268" selection-start-column="44" selection-end-line="268" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/alert.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -797,14 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="85" selection-start-line="95" selection-start-column="85" selection-end-line="95" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/cloud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -827,8 +807,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/modules/cloud-processes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15991472">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/cloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3438202">
+          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
           <folding />
         </state>
       </provider>
