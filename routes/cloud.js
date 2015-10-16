@@ -98,7 +98,8 @@ router.post('/mobileAlert', function(req, res, next) {
         details: req.body.details,
         location: req.body.location,
         rating: req.body.rating,
-        createdBy: req.body._id,
+        createdId: req.body._id,
+        createdBy: req.name,
         created: Date.now()
     });
 
