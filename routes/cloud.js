@@ -136,6 +136,18 @@ router.get('/getEvents', function(req,res,next){
 
 });
 
+router.get('/getAlerts', function(req,res,next){
+
+    Alert.find(function(err, alert) {
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify(alert));
+    });
+    /*Event.find(function(err,alert) {
+     res.send(alert);
+     });*/
+
+});
+
 
 
 module.exports = router;
