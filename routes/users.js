@@ -86,8 +86,8 @@ router.post('/mobilelogin',
     },
 
     passport.authenticate('local', {
-      failureRedirect: '/',
-      successRedirect: '/fail',
+      failureRedirect: '/fail',
+      successRedirect: '/pass',
       failureFlash: 'Invalid credentials'
     }));
 
