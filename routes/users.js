@@ -80,15 +80,13 @@ router.post('/login',
 router.post('/mobilelogin',
     function(req, res, next){
       console.log(req.body);
-      if(req.body.rememberMe){
-        req.session.cookie.maxAge = config.cookieMaxAge;
-      }
+
       sess = req.session;
       next();
     },
 
     passport.authenticate('local', {
-      failureRedirect: '/pass',
+      failureRedirect: '/',
       successRedirect: '/fail',
       failureFlash: 'Invalid credentials'
     }));
