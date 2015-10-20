@@ -94,11 +94,11 @@ router.post('/mobilelogin',
     }));
 
 router.get('/pass', function(req,res,next){
-  res.sendStatus(200);
+  res.send(200);
 });
 
 router.get('/fail', function(req,res,next){
-  res.sendStatus(401);
+  res.send(401);
 });
 
 /**
