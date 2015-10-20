@@ -77,6 +77,30 @@ router.post('/login',
       failureFlash: 'Invalid credentials'
     }));
 
+router.post('/mobilelogin',
+    function(req, res, next){
+      console.log(req.body);
+      if(req.body.rememberMe){
+        req.session.cookie.maxAge = config.cookieMaxAge;
+      }
+      sess = req.session;
+      next();
+    },
+
+    passport.authenticate('local', {
+      failureRedirect: '/',
+      successRedirect: '/cloud',
+      failureFlash: 'Invalid credentials'
+    }));
+
+router.get('/pass', function(req,res,next){
+  res.sendStatus(200);
+});
+
+router.get('/fail', function(req,res,next){
+  res.sendStatus(401);
+});
+
 /**
  * GET call used for loggout and removing session data
  */

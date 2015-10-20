@@ -103,7 +103,7 @@
                 <div class="col-md-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Current Alerts & Warnings</h3>
+                            <h3 class="box-title">Events Received from Emergency Services</h3>
                             <div class="box-tools pull-right">
                                 <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 
@@ -118,7 +118,7 @@
                                         <table class="table table-condensed table-hover">
                                             <tbody>
                                             <!-- Generates rows for each Alert in Database-->
-                                            {{#each alert}}
+                                            {{#each event}}
 
                                             <tr class="alerts">
                                                 <td class="font-montserrat all-caps col-lg-3 client">
@@ -138,6 +138,117 @@
                                                 </td>
 
                                             </tr>
+
+
+                                            {{/each}}
+                                            <!--
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>-->
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div><!-- /.col -->
+                                <!-- /.col -->
+                            </div><!-- /.row -->
+                        </div><!-- ./box-body -->
+                        <!--<div class="box-footer">
+                            <div class="row">
+
+                            </div><!-- /.row
+                        </div><!-- /.box-footer -->
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Alerts Sent</h3>
+                            <div class="box-tools pull-right">
+                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+                                <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="auto-overflow widget-11-2-table">
+
+                                        <table class="table table-condensed table-hover">
+                                            <tbody>
+                                            <!-- Generates rows for each Alert in Database-->
+                                            {{#each alert}}
+
+                                                <tr class="alerts">
+                                                    <td class="font-montserrat all-caps col-lg-3 client">
+                                                        <h3>{{alertType}}</h3>
+                                                        <span>{{created}}</span>
+                                                    </td>
+                                                    <td class=" b-r b-dashed b-grey col-lg-3">
+                                                        <span class="">{{details}}</span><br>
+
+                                                    </td>
+                                                    <td class="col-lg-2 alarm-grade text-danger">
+                                                        {{rating}}
+                                                    </td>
+
+                                                    <td class="col-lg-4">
+                                                        <span class="location">{{location}}</span>
+                                                    </td>
+
+                                                </tr>
 
 
                                             {{/each}}
