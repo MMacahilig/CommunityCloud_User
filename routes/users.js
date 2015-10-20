@@ -86,8 +86,8 @@ router.post('/mobilelogin',
     },
 
     passport.authenticate('local', {
-      failureRedirect: '/fail',
-      successRedirect: '/pass',
+      failureRedirect: 'http://communitycloud.herokuapp.com/users/fail',
+      successRedirect: 'http://communitycloud.herokuapp.com/users/pass',
       failureFlash: 'Invalid credentials'
     }));
 
