@@ -40,6 +40,9 @@ router.post('/alert', function(req, res, next) {
         AlertType: req.body.alertType,
         details: req.body.details,
         location: req.body.location,
+        street: req.body.street,
+        city: req.body.city,
+        state: req.body.state,
         rating: req.body.rating,
         createdBy: req.user._id,
         created: Date.now()
