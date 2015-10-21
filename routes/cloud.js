@@ -100,7 +100,7 @@ router.get('/addcontact', function(req, res, next) {
         lastName : req.user.lastName
     };
 
-    res.render('contact');
+    res.render('contact',vm);
 });
 
 router.post('/mobileAlert', function(req, res, next) {
