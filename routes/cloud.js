@@ -95,9 +95,12 @@ router.post('/receiveEvent', function(req,res,next){
 });
 
 router.get('/addcontact', function(req, res, next) {
+    var startDate = new Date(req.user.created);
+    var dateString = startDate.getDate() + "/" + startDate.getMonth() + "/" + startDate.getYear();
     var vm = {
         firstName: req.user.firstName,
-        lastName : req.user.lastName
+        lastName : req.user.lastName,
+        created: dateString
     };
 
     res.render('contact',vm);

@@ -6,13 +6,9 @@ var contactSchema = new Schema({
     firstName: { type: String, required: 'Please enter your first name'},
     lastName: { type: String, required: 'Please enter your last name'},
     email: { type: String, required: 'Please enter your email'},
-    password: { type: String, required: 'Please your password '},
-    address:  String,
-    city: String,
-    postcode: String,
-    state: String,
     homePhone: String,
     mobilePhone: String,
+    userId: Schema.ObjectId,
     created: {type: Date, Default: Date.now()}
 });
 
