@@ -24,6 +24,9 @@ router.get('/', restrict, function(req, res, next) {
                 id: req.user._id,
                 event: event,
                 alert: alert,
+                address: req.user.address,
+                city: req.user.city,
+                state: req.user.state,
                 created: dateString
             };
             res.render('cloud',vm);
