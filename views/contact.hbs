@@ -1,294 +1,487 @@
 <div class="wrapper">
 
     <header class="main-header">
+        <nav class="navbar navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand"><b>Community</b>Cloud</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
 
-        <!-- Logo -->
-        <a href="/" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">Community Cloud</span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">Community Cloud</span>
-        </a>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- /.navbar-collapse -->
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <!-- /.messages-menu -->
 
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
+                        <!-- Notifications Menu -->
 
+                        <!-- Tasks Menu -->
 
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../images/user-small.png" class="user-image" alt="User Image">
+                                <span class="hidden-xs" id="username">{{firstName}} {{lastName}}</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="../images/user-large.png" class="img-circle" alt="User Image">
+                                    <p>
+                                        {{firstName}} {{lastName}}
+                                        <small>Member since {{created}}</small>
+                                        <span class="hidden-xs hidden" id="userID">{{id}}</span>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <!--
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>-->
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Settings</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="users/logout" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-custom-menu -->
+            </div><!-- /.container-fluid -->
         </nav>
     </header>
-    <!-- Left side column. contains the logo and sidebar -->
-
-
-    <!-- Content Wrapper. Contains page content -->
+    <!-- Full Width Column -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
                 Add Family or Next of Kin
-
             </h1>
 
         </section>
 
         <!-- Main content -->
         <section class="content">
-            {{#if error}}
-                <div class="alert alert-danger" role="alert">{{error}}</div>
-            {{/if}}
-            <form id="form-register" class="p-t-15" role="form" name="create-user-form" method="post" novalidate>
-                <div class="col-md-6">
-                    <h3>Login Details</h3>
+            <!-- Info boxes -->
+            <!-- /.row -->
+        <form>
+            <div class="col-md-6">
+                <h3>Login Details</h3>
 
-                    <div class="form-group">
-                        <label for="userEmail">Email address</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{input.email}}">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="userPassword">Password</label>
-                        <input type="password" class="form-control" placeholder="Passwords should match" name="password" value="{{input.password}}" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="userPassword">Password Confirmation</label>
-                        <input type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword" value="{{input.confirmPassword}}" required>
-                    </div>
-
-                    <h3>User Details</h3>
-                    <div class="form-group">
-                        <label for="userFirstName">First Name</label>
-                        <input type="text" class="form-control" id="userFirstName"name="firstName" placeholder="First Name" value="{{input.firstName}}">
-                    </div>
-                    <div class="form-group">
-                        <label for="userLastName">Last Name</label>
-                        <input type="text" class="form-control" id="userLastName" name="lastName" placeholder="Last Name" value="{{input.lastName}}">
-                    </div>
-
+                <div class="form-group">
+                    <label for="userEmail">Email address</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{input.email}}">
                 </div>
 
-                <div class="col-md-6">
-                    <h4>Contact Details</h4>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input type="password" class="form-control" placeholder="Passwords should match" name="password" value="{{input.password}}" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="userHomePhone">Home Phone</label>
-                        <input type="text" class="form-control" id="userHomePhone" name="homePhone" placeholder="Home Phone Number" value="{{input.homePhone}}">
-                    </div>
+                <div class="form-group">
+                    <label for="userPassword">Password Confirmation</label>
+                    <input type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword" value="{{input.confirmPassword}}" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="userMobilePhone">Mobile Phone</label>
-                        <input type="text" class="form-control" id="userMobilePhone" name="mobilePhone" placeholder="Mobile Phone Number" value="{{input.mobilePhone}}">
-                    </div>
+                <h3>User Details</h3>
+                <div class="form-group">
+                    <label for="userFirstName">First Name</label>
+                    <input type="text" class="form-control" id="userFirstName"name="firstName" placeholder="First Name" value="{{input.firstName}}">
+                </div>
+                <div class="form-group">
+                    <label for="userLastName">Last Name</label>
+                    <input type="text" class="form-control" id="userLastName" name="lastName" placeholder="Last Name" value="{{input.lastName}}">
+                </div>
 
-                    <div class="form-group">
-                        <label for="userAddress">Home Address</label>
-                        <input type="text" class="form-control" id="userAddress" name="address" placeholder="Number and Street" value="{{input.address}}">
-                    </div>
+            </div>
 
-                    <div class="form-group">
-                        <label for="userCity">City</label>
-                        <input type="text" class="form-control" id="userCity" name="city" placeholder="City or Suburb" value="{{input.city}}">
-                    </div>
+            <div class="col-md-6">
+                <h4>Contact Details</h4>
 
-                    <div class="form-group">
-                        <label for="userPostCode">Postcode</label>
-                        <input type="text" class="form-control" id="userPostCode" name="postcode" maxlength="4" placeholder="e.g. 2000" value="{{input.postcode}}">
-                    </div>
+                <div class="form-group">
+                    <label for="userHomePhone">Home Phone</label>
+                    <input type="text" class="form-control" id="userHomePhone" name="homePhone" placeholder="Home Phone Number" value="{{input.homePhone}}">
+                </div>
 
+                <div class="form-group">
+                    <label for="userMobilePhone">Mobile Phone</label>
+                    <input type="text" class="form-control" id="userMobilePhone" name="mobilePhone" placeholder="Mobile Phone Number" value="{{input.mobilePhone}}">
+                </div>
 
-                    <div class="form-group">
-                        <label for="userState">State</label>
-                        <select class="form-control" id="userState" name="state" value="{{input.state}}">
-                            <option value="NSW">NSW</option>
-                            <option value="ACT">ACT</option>
-                            <option value="QLD">QLD</option>
-                            <option value="NT">NT</option>
-                            <option value="SA">SA</option>
-                            <option value="WA">WA</option>
-                            <option value="TAS">TAS</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="userAddress">Home Address</label>
+                    <input type="text" class="form-control" id="userAddress" name="address" placeholder="Number and Street" value="{{input.address}}">
+                </div>
 
-                    <button type="submit" class="btn btn-default">Submit</button>
+                <div class="form-group">
+                    <label for="userCity">City</label>
+                    <input type="text" class="form-control" id="userCity" name="city" placeholder="City or Suburb" value="{{input.city}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="userPostCode">Postcode</label>
+                    <input type="text" class="form-control" id="userPostCode" name="postcode" maxlength="4" placeholder="e.g. 2000" value="{{input.postcode}}">
                 </div>
 
 
+                <div class="form-group">
+                    <label for="userState">State</label>
+                    <select class="form-control" id="userState" name="state" value="{{input.state}}">
+                        <option value="NSW">NSW</option>
+                        <option value="ACT">ACT</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="SA">SA</option>
+                        <option value="WA">WA</option>
+                        <option value="TAS">TAS</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="info-box">
+                        <button class="col-md-12 btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg"><h3>Send Alert</h3></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <button class="btn btn-primary delete" id="deleteAlerts" type="button">Delete Alerts</button>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-primary delete" id="deleteEvents" type="button">Delete Events</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Events Received from Emergency Services</h3>
+                            <div class="box-tools pull-right">
+                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+                                <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="auto-overflow widget-11-2-table">
+
+                                        <table class="table table-condensed table-hover">
+                                            <tbody>
+                                            <!-- Generates rows for each Alert in Database-->
+                                            {{#each event}}
+
+                                                <tr class="alerts">
+                                                    <td class="font-montserrat all-caps col-lg-3 client">
+                                                        <h3>{{alertType}}</h3>
+                                                        <span>{{created}}</span>
+                                                    </td>
+                                                    <td class=" b-r b-dashed b-grey col-lg-3">
+                                                        <span class="">{{details}}</span><br>
+
+                                                    </td>
+                                                    <td class="col-lg-2 alarm-grade text-danger">
+                                                        {{rating}}
+                                                    </td>
+
+                                                    <td class="col-lg-4">
+                                                        <span class="location">{{location}}</span>
+                                                    </td>
+
+                                                </tr>
 
 
-            </form>
+                                            {{/each}}
+                                            <!--
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>-->
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div><!-- /.col -->
+                                <!-- /.col -->
+                            </div><!-- /.row -->
+                        </div><!-- ./box-body -->
+                        <!--<div class="box-footer">
+                            <div class="row">
+
+                            </div><!-- /.row
+                        </div><!-- /.box-footer -->
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Alerts Sent</h3>
+                            <div class="box-tools pull-right">
+                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+                                <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="auto-overflow widget-11-2-table">
+
+                                        <table class="table table-condensed table-hover">
+                                            <tbody>
+                                            <!-- Generates rows for each Alert in Database-->
+                                            {{#each alert}}
+
+                                                <tr class="alerts">
+                                                    <td class="font-montserrat all-caps col-lg-3 client">
+                                                        <h3>{{alertType}}</h3>
+                                                        <span>{{created}}</span>
+                                                    </td>
+                                                    <td class=" b-r b-dashed b-grey col-lg-3">
+                                                        <span class="">{{details}}</span><br>
+
+                                                    </td>
+                                                    <td class="col-lg-2 alarm-grade text-danger">
+                                                        {{rating}}
+                                                    </td>
+
+                                                    <td class="col-lg-4">
+                                                        <span class="location">{{location}}</span>
+                                                    </td>
+
+                                                </tr>
+
+
+                                            {{/each}}
+                                            <!--
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="alerts">
+                                                <td class="font-montserrat all-caps col-lg-5 client">UTS</td>
+                                                <td class=" b-r b-dashed b-grey col-lg-4">
+                                                    <span class="hint-text small alarm-type">Type: Emergency</span><br>
+                                                    <span class="hint-text small data-time"> 2:00PM - 1/7/2015</span><br>
+                                                    <span class="hint-text small location">UTS</span>
+                                                </td>
+                                                <td class="col-lg-2 alarm-grade text-danger">
+                                                    High
+                                                </td>
+
+                                                <td class="col-lg-1">
+                                                    <button type="button" class="close" style="padding-top:5px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </td>
+
+                                            </tr>-->
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div><!-- /.col -->
+                                <!-- /.col -->
+                            </div><!-- /.row -->
+                        </div><!-- ./box-body -->
+                        <!--<div class="box-footer">
+                            <div class="row">
+
+                            </div><!-- /.row
+                        </div><!-- /.box-footer -->
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg">
+
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="gridSystemModalLabel">Alert</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+
+
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="alertType">Alert Type</label>
+                                            <select id="alertType" name="alertType" value="{{input.alertType}}" class="form-control">
+                                                <option value="Fire">Fire</option>
+                                                <option value="Flood">Flood</option>
+                                                <option value="Severe Storm">Severe Storm</option>
+                                                <option value="Disease">Disease</option>
+                                                <option value="Crime">Crime</option>
+                                                <option value="Emergency">Emergency</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group form-group-default">
+                                            <label for="alertDetails">Alert Details</label>
+                                            <textarea class="form-control" id="alertDetails" name="details" value="{{input.details}}" ></textarea>
+                                        </div>
+
+                                        <div class="form-group form-group-default">
+                                            <label for="alertLocation">Location</label>
+                                            <input type="text" class="form-control" id="location" name="location" value="{{input.location}}" placeholder="Address, City, or Postcode" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="alertRating">Rating</label>
+                                            <select id="alertRating" name="rating" value="{{input.rating}}" class="form-control">
+                                                <option value="High">High</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="Low">Low</option>
+                                            </select>
+                                        </div>
+                                        <!-- IF using longitude and latitude + Google Maps API-->
+                                        <!--
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label>Longitude</label>
+                                                        <input type="text" class="form-control" name="communityName" value="{{input.communityName}}" >
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Latitude</label>
+                                                        <input type="text" class="form-control" name="communityName" value="{{input.communityName}}" >
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>&nbsp;</label>
+                                                        <button class="btn-primary btn form-control" type="button">Find</button>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button type="submit" data-dismiss="modal" id="sendAlert" class="btn btn-danger">Send</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Main row -->
+
+
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
-
     <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.0
-        </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        <div class="container">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.3.0
+            </div>
+            <strong>Copyright © 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        </div><!-- /.container -->
     </footer>
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <!-- Home tab content -->
-            <div class="tab-pane" id="control-sidebar-home-tab">
-                <h3 class="control-sidebar-heading">Recent Activity</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                                <p>Will be 23 on April 24th</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-user bg-yellow"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                                <p>New phone +1(800)555-1234</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                                <p>nora@example.com</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                                <p>Execution time 5 seconds</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul><!-- /.control-sidebar-menu -->
-
-                <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Custom Template Design
-                                <span class="label label-danger pull-right">70%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Update Resume
-                                <span class="label label-success pull-right">95%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Laravel Integration
-                                <span class="label label-warning pull-right">50%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Back End Framework
-                                <span class="label label-primary pull-right">68%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul><!-- /.control-sidebar-menu -->
-
-            </div><!-- /.tab-pane -->
-
-            <!-- Settings tab content -->
-            <div class="tab-pane" id="control-sidebar-settings-tab">
-                <form method="post">
-                    <h3 class="control-sidebar-heading">General Settings</h3>
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Report panel usage
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Some information about this general settings option
-                        </p>
-                    </div><!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Allow mail redirect
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Other sets of options are available
-                        </p>
-                    </div><!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Expose author name in posts
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Allow the user to show his name in blog posts
-                        </p>
-                    </div><!-- /.form-group -->
-
-                    <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Show me as online
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                    </div><!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Turn off notifications
-                            <input type="checkbox" class="pull-right">
-                        </label>
-                    </div><!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Delete chat history
-                            <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                        </label>
-                    </div><!-- /.form-group -->
-                </form>
-            </div><!-- /.tab-pane -->
-        </div>
-    </aside><!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-
-</div><!-- ./wrapper -->
+</div>
