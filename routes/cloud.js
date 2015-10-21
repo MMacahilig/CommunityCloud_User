@@ -95,6 +95,11 @@ router.post('/receiveEvent', function(req,res,next){
 });
 
 router.get('/addcontact', function(req, res, next) {
+    var vm = {
+        firstName: req.user.firstName,
+        lastName : req.user.lastName
+    };
+
     res.render('contact');
 });
 
