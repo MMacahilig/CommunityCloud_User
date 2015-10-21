@@ -94,6 +94,10 @@ router.post('/receiveEvent', function(req,res,next){
 
 });
 
+router.get('/addcontact', function(req, res, next) {
+    res.render('contact');
+});
+
 router.post('/mobileAlert', function(req, res, next) {
     console.log("trigger");
     console.log(req.body);
