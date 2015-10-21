@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44d080e1-c248-4e18-b0fc-5fa6799b8878" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/cloud.js" afterPath="$PROJECT_DIR$/routes/cloud.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/contact.hbs" afterPath="$PROJECT_DIR$/views/contact.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/contact.js" afterPath="$PROJECT_DIR$/models/contact.js" />
     </list>
     <ignored path="Heroku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,12 +57,9 @@
       <file leaf-file-name="contact.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/contact.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1148256">
-              <caret line="162" column="12" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.7165698">
+              <caret line="158" column="19" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -558,12 +553,12 @@
       <workItem from="1444970775346" duration="1336000" />
       <workItem from="1445210664123" duration="89000" />
       <workItem from="1445342077571" duration="2377000" />
-      <workItem from="1445381962871" duration="1201000" />
+      <workItem from="1445381962871" duration="1343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15734000" />
+    <option name="totallyTimeSpent" value="15876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -990,12 +985,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/contact.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1148256">
-          <caret line="162" column="12" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.7165698">
+          <caret line="158" column="19" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
