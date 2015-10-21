@@ -129,6 +129,8 @@ router.post('/addcontact', function(req, res, next) {
     res.redirect('/');
 });
 
+
+
 router.post('/mobileAlert', function(req, res, next) {
     console.log("trigger");
     console.log(req.body);
@@ -178,6 +180,12 @@ router.get('/getEvents', function(req,res,next){
        res.send(alert);
     });*/
 
+});
+
+router.get('/getcontacts',function(req,res,next){
+    Contact.find({userId: req.user._id}).lean().exec(function(err,docs){
+        res.send(docs);
+    });
 });
 
 router.get('/getAlerts', function(req,res,next){
