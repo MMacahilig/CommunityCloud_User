@@ -3,6 +3,7 @@ var router = express.Router();
 var Event = require('../models/Event').Event;
 var Alert = require('../models/alert').Alert;
 var User = require('../models/user').User;
+var Contact = require('../models/contact').Contact;
 
 var restrict = require('../auth/restrict');
 
@@ -104,6 +105,28 @@ router.get('/addcontact', function(req, res, next) {
     };
 
     res.render('contact',vm);
+});
+
+router.post('/addcontact', function(req, res, next) {
+
+    var newContact = new Contact({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        homePhone: req.body.homePhone,
+        mobilePhone: req.body.mobilePhone,
+        userId: req.user._id,
+        created: Date.now()
+    });
+
+    newContact.save(function (err) {
+        if(err){
+            console.log(err);
+            return next(err);
+        }
+        next(null);
+    });
+    res.redirect('/');
 });
 
 router.post('/mobileAlert', function(req, res, next) {
