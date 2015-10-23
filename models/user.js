@@ -13,6 +13,7 @@ var userSchema = new Schema({
     state: String,
     homePhone: String,
     mobilePhone: String,
+    currentLocation: String,
     created: {type: Date, Default: Date.now()}
 });
 
