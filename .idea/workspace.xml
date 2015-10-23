@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="44d080e1-c248-4e18-b0fc-5fa6799b8878" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/cloud.js" afterPath="$PROJECT_DIR$/routes/cloud.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user.js" afterPath="$PROJECT_DIR$/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Heroku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="cloud.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/cloud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49577466">
-              <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.5380282">
+              <caret line="192" column="3" selection-start-line="192" selection-start-column="3" selection-end-line="192" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -577,12 +575,12 @@
       <workItem from="1445210664123" duration="89000" />
       <workItem from="1445342077571" duration="2377000" />
       <workItem from="1445381962871" duration="4222000" />
-      <workItem from="1445563765914" duration="480000" />
+      <workItem from="1445563765914" duration="984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19235000" />
+    <option name="totallyTimeSpent" value="19739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -1023,8 +1021,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/cloud.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49577466">
-          <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.5380282">
+          <caret line="192" column="3" selection-start-line="192" selection-start-column="3" selection-end-line="192" selection-end-column="3" />
           <folding />
         </state>
       </provider>

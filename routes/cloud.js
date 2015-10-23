@@ -181,8 +181,8 @@ router.get('/getEvents', function(req,res,next){
    Event.find(function(err, alert) {
         res.setHeader('Content-Type', 'application/json');
         for(var i = 0; i<alert.length;i++) {
-            var date = new Date(alert[i].created);
-            alert[i].created = date.getTime();
+            var temp = new Date(alert[i].created);
+            alert[i].created = temp.getTime();
         }
         res.send(JSON.stringify(alert));
     });
