@@ -192,6 +192,13 @@ router.get('/getEvents', function(req,res,next){
 
 });
 
+router.get('/getuser', function(res,req,next){
+    var id = req.query._id;
+    User.find({userId: req.user._id}).lean().exec(function(err,docs){
+        res.send(JSON.stringify(docs));
+    });
+});
+
 router.get('/getcontacts',function(req,res,next){
     Contact.find({userId: req.user._id}).lean().exec(function(err,docs){
         res.send(docs);
