@@ -195,7 +195,7 @@ router.get('/getEvents', function(req,res,next){
 router.get('/getuser', function(req,res,next){
     //console.log(req.query);
     var id = req.query._id;
-    User.find({userId: id}).lean().exec(function(err,docs){
+    User.find({_id: id}).lean().exec(function(err,docs){
         res.send(JSON.stringify(docs));
     });
     //res.send(JSON.stringify(req.query));
