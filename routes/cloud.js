@@ -192,7 +192,7 @@ router.get('/getEvents', function(req,res,next){
 
 });
 
-router.get('/getuser', function(res,req,next){
+router.get('/getuser', function(req,res,next){
     console.log(req.query);
     //var id = req.query.id;
     /*User.find({userId: id}).lean().exec(function(err,docs){
