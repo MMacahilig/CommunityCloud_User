@@ -195,9 +195,10 @@ router.get('/getEvents', function(req,res,next){
 router.get('/getuser', function(res,req,next){
     console.log(req.query);
     var id = req.query.id;
-    User.find({userId: id}).lean().exec(function(err,docs){
+    /*User.find({userId: id}).lean().exec(function(err,docs){
         res.send(JSON.stringify(docs));
-    });
+    });*/
+    res.send(JSON.stringify(req.query));
 });
 
 router.get('/getcontacts',function(req,res,next){
