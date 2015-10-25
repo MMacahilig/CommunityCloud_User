@@ -193,12 +193,12 @@ router.get('/getEvents', function(req,res,next){
 });
 
 router.get('/getuser', function(req,res,next){
-    console.log(req.query);
-    //var id = req.query.id;
-    /*User.find({userId: id}).lean().exec(function(err,docs){
+    //console.log(req.query);
+    var id = req.query._id;
+    User.find({userId: id}).lean().exec(function(err,docs){
         res.send(JSON.stringify(docs));
-    });*/
-    res.send(JSON.stringify(req.query));
+    });
+    //res.send(JSON.stringify(req.query));
 });
 
 router.get('/getcontacts',function(req,res,next){
