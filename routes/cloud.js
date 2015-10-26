@@ -40,14 +40,13 @@ router.post('/alert', function(req, res, next) {
     console.log("trigger");
     console.log(req.body);
     var newAlert = new Alert ({
-        AlertType: req.body.alertType,
+        alertType: req.body.alertType,
         details: req.body.details,
-        location: req.body.location,
-        street: req.body.street,
+        address: req.body.address,
         city: req.body.city,
         state: req.body.state,
-        rating: req.body.rating,
-        createdBy: req.user._id,
+        createdBy: req.body.createdBy,
+        createdId: req.body.createdId,
         created: Date.now()
     });
 
@@ -208,6 +207,26 @@ router.get('/getcontacts',function(req,res,next){
 });
 
 router.post('/pialert', function(req,res,next){
+    var newAlert = new Alert({
+        alertType: req.body.alertType,
+        details: req.body.details,
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
+        createdBy: req.body.createdBy,
+        createdId: req.body.createdId,
+        created: Date.now()
+    });
+
+    newAlert.save(function (err) {
+        if(err){
+            console.log(err);
+            return next(err);
+        }
+        next(null);
+    });
+
+    newAlert.save();
     res.send(JSON.stringify(req.body));
 });
 router.get('/getAlerts', function(req,res,next){
