@@ -44,7 +44,6 @@ router.post('/register', function (req, res, next) {
       console.log(err);
       delete vm.input.password;
       delete vm.input.confirmPassword;
-      console.log(vm);
       return res.render('Login/register', vm);
     }
     req.login(req.body, function(err){
