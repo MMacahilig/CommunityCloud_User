@@ -168,11 +168,13 @@ router.post('/mobileAlert', function(req, res, next) {
 router.delete('/deleteEvents', function(req, res, next) {
     console.log("trigger");
     Event.remove({},function(){console.log("Deleted Alerts");});
+    res.send(200);
 });
 
 router.delete('/deleteAlerts', function(req, res, next) {
     console.log("trigger");
     Alert.remove({},function(){console.log("Deleted Alerts");});
+    res.send(200);
 });
 
 router.get('/getEvents', function(req,res,next){
