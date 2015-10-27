@@ -37,8 +37,8 @@ router.get('/', restrict, function(req, res, next) {
 });
 
 router.post('/alert', function(req, res, next) {
-    console.log("trigger");
-    console.log(req.body);
+    //console.log("trigger");
+    console.log("query Body:" + req.body);
     var newAlert = new Alert ({
         alertType: req.body.alertType,
         details: req.body.details,
@@ -60,7 +60,7 @@ router.post('/alert', function(req, res, next) {
 
     res.sendStatus(200);
 
-    res.redirect('/');
+    //res.redirect('/');
 });
 
 router.post('/receiveEvent', function(req,res,next){
@@ -156,7 +156,7 @@ router.post('/mobileAlert', function(req, res, next) {
         }
         next(null);
     });
-    
+
     res.send(200);
 
 });
