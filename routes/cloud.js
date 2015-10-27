@@ -4,7 +4,7 @@ var Event = require('../models/Event').Event;
 var Alert = require('../models/alert').Alert;
 var User = require('../models/user').User;
 var Contact = require('../models/contact').Contact;
-var EventNotification = require('../models/event-notification').EventNotification;
+var EventNotification = require('../models/event-notifications').EventNotification;
 
 var restrict = require('../auth/restrict');
 
