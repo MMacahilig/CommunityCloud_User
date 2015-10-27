@@ -4,6 +4,7 @@ var Event = require('../models/Event').Event;
 var Alert = require('../models/alert').Alert;
 var User = require('../models/user').User;
 var Contact = require('../models/contact').Contact;
+var EventNotification = require('../models/event-notification').EventNotification;
 
 var restrict = require('../auth/restrict');
 
@@ -80,7 +81,9 @@ router.post('/receiveEvent', function(req,res,next){
     var newEvent = new Event({
         alertType: req.body.alertType,
         details: req.body.details,
-        location: req.body.location,
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
         rating: req.body.rating,
         createdBy: req.body.createdBy,
         createdId: req.body.createdId,
@@ -94,6 +97,40 @@ router.post('/receiveEvent', function(req,res,next){
         }
         next(null);
     });
+
+    var eventState = newEvent.state;
+    var eventCity = newEvent.city;
+
+    User.find({$or:[ {city:eventCity},{state: eventState}]},function(err,user){
+        if(user){
+            user.forEach(function(user){
+                var newEventNotification = new EventNotification ({
+                    UserId: user._id,
+                    createdBy: newAlert.createdBy,
+                    createdId: newAlert.createdId,
+                    eventId: newEvent._id,
+                    dismissed: false,
+                    created: Date.now()
+                });
+
+                EventNotification.save(function (err) {
+                    if(err){
+                        console.log(err);
+                        //return next(err);
+                    }
+                    next(null);
+                });
+            });
+
+        }
+
+    });
+
+    var newEventNotification = new EventNotification({
+
+    });
+
+
 
     res.sendStatus(200);
 

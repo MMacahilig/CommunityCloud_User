@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var eventSchema = new Schema({
     alertType: String,
     details: String,
-    street: String,
+    address: String,
     city: String,
     state: String,
     rating: String,

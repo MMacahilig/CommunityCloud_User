@@ -6,6 +6,7 @@ var eventNotificationSchema = new Schema({
     UserId: Schema.ObjectId,
     createdBy: Schema.ObjectId,
     dismissed: Boolean,
+    eventId: Schema.ObjectId,
     created: {type: Date, Default: Date.now()}
 });
 
