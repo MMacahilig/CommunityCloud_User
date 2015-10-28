@@ -148,8 +148,8 @@ router.post('/receiveEvent', function(req,res,next){
             user.forEach(function(user){
                 var newEventNotification = new EventNotification ({
                     UserId: user._id,
-                    createdBy: newAlert.createdBy,
-                    createdId: newAlert.createdId,
+                    createdBy: newEvent.createdBy,
+                    createdId: newEvent.createdId,
                     eventId: newEvent._id,
                     dismissed: false,
                     created: Date.now()
@@ -279,7 +279,7 @@ router.get('/getcontacts',function(req,res,next){
 });
 
 router.get('/geteventnotif',function(req,res,next){
-    EventNotification.find({}).lean().exec(function(err,docs){
+    EventNotification.find().lean().exec(function(err,docs){
         res.send(docs);
     });
 });
