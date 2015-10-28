@@ -117,6 +117,7 @@ router.post('/receiveEvent', function(req,res,next){
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
 
+    console.log("RECEIVED");
 
     var newEvent = new Event({
         alertType: req.body.alertType,
@@ -142,6 +143,7 @@ router.post('/receiveEvent', function(req,res,next){
     var eventCity = newEvent.city;
 
     User.find({$or:[ {city:eventCity},{state: eventState}]},function(err,user){
+        console.log("searching");
         if(user){
             user.forEach(function(user){
                 var newEventNotification = new EventNotification ({
