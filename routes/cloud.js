@@ -38,24 +38,42 @@ router.get('/', restrict, function(req, res, next) {
             }
         }
         queryString += "]";
+        Event.find({ _id:{$in: alertString }}).lean().exec(function(err,event){
+            if(event){
+                Alert.find().lean().exec(function(err, alert) {
+                    var vm = {
+                        firstName : req.user.firstName,
+                        lastName : req.user.lastName,
+                        id: req.user._id,
+                        event: event,
+                        alert: alert,
+                        created: dateString
+                    };
+                    res.render('cloud',vm);
+                });
+            }
+        });
     });
-        Alert.find({createdId:req.user._id}).lean().exec(function(err,alert) {
-            Event.find().lean().exec(function(err, event) {
-                var vm = {
-                    firstName : req.user.firstName,
-                    lastName : req.user.lastName,
-                    id: req.user._id,
-                    event: event,
-                    alert: alert,
-                    address: req.user.address,
-                    city: req.user.city,
-                    state: req.user.state,
-                    created: dateString
-                };
-                res.render('cloud',vm);
-            });
 
-    });
+
+
+        //Alert.find({createdId:req.user._id}).lean().exec(function(err,alert) {
+        //    Event.find().lean().exec(function(err, event) {
+        //        var vm = {
+        //            firstName : req.user.firstName,
+        //            lastName : req.user.lastName,
+        //            id: req.user._id,
+        //            event: event,
+        //            alert: alert,
+        //            address: req.user.address,
+        //            city: req.user.city,
+        //            state: req.user.state,
+        //            created: dateString
+        //        };
+        //        res.render('cloud',vm);
+        //    });
+        //
+        //});
 
 });
 
