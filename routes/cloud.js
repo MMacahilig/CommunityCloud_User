@@ -155,7 +155,7 @@ router.post('/receiveEvent', function(req,res,next){
                     created: Date.now()
                 });
 
-                EventNotification.save(function (err) {
+                newEventNotification.save(function (err) {
                     if(err){
                         console.log(err);
                         //return next(err);

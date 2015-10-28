@@ -27,8 +27,8 @@
       <file leaf-file-name="cloud.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/cloud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67948717">
-              <caret line="157" column="55" selection-start-line="157" selection-start-column="55" selection-end-line="157" selection-end-column="55" />
+            <state vertical-scroll-proportion="-2.974359">
+              <caret line="157" column="36" selection-start-line="157" selection-start-column="36" selection-end-line="157" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -572,12 +572,12 @@
       <workItem from="1445852091314" duration="3816000" />
       <workItem from="1445895536342" duration="4566000" />
       <workItem from="1445938410778" duration="2593000" />
-      <workItem from="1445990170635" duration="1557000" />
+      <workItem from="1445990170635" duration="1727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35118000" />
+    <option name="totallyTimeSpent" value="35288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -1015,8 +1015,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/cloud.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67948717">
-          <caret line="157" column="55" selection-start-line="157" selection-start-column="55" selection-end-line="157" selection-end-column="55" />
+        <state vertical-scroll-proportion="-2.974359">
+          <caret line="157" column="36" selection-start-line="157" selection-start-column="36" selection-end-line="157" selection-end-column="36" />
           <folding />
         </state>
       </provider>
