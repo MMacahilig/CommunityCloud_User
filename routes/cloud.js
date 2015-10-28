@@ -26,7 +26,7 @@ router.get('/', restrict, function(req, res, next) {
         if(docs){
             for (var key in docs) {
                 //console.log("key:" + docs[key].alertId);
-                alertString.push(docs[key].alertId);
+                alertString.push(docs[key].eventId);
             }
         }
         //console.log("alerts: " + alertString);
@@ -134,7 +134,7 @@ router.post('/receiveEvent', function(req,res,next){
     newEvent.save(function (err) {
         if(err){
             console.log(err);
-            return next(err);
+
         }
         next(null);
     });
@@ -237,6 +237,7 @@ router.post('/mobileAlert', function(req, res, next) {
 
 router.delete('/deleteEvents', function(req, res, next) {
     console.log("trigger");
+    EventNotification.remove({},function(){console.log("Deleted Notifications");});
     Event.remove({},function(){console.log("Deleted Alerts");});
     res.send(200);
 });
