@@ -17,21 +17,43 @@ router.get('/', restrict, function(req, res, next) {
     var dateString = startDate.getDate() + "/" + startDate.getMonth() + "/" + startDate.getYear();
     //var dateString = startDate.getDate() + "/" + (startDate.getMonth()+1) + "/" + startDate.getYear();
     //console.log(dateString);
-    Alert.find().lean().exec(function(err,alert) {
-        Event.find().lean().exec(function(err, event) {
-            var vm = {
-                firstName : req.user.firstName,
-                lastName : req.user.lastName,
-                id: req.user._id,
-                event: event,
-                alert: alert,
-                address: req.user.address,
-                city: req.user.city,
-                state: req.user.state,
-                created: dateString
-            };
-            res.render('cloud',vm);
-        });
+
+    EventNotification.find({UserId: req.user._id}).lean().exec(function(err,docs) {
+        var alertString = [];
+        var queryString = "[";
+        var i = 0;
+
+        if(docs){
+            for (var key in docs) {
+                //console.log("key:" + docs[key].alertId);
+                alertString.push(docs[key].alertId);
+            }
+        }
+        //console.log("alerts: " + alertString);
+        for (var i = 0; i < alertString.length; i++) {
+            if(i == alertString.length -1){
+                queryString += "{_id:" + alertString[i]+"}";
+            }else{
+                queryString += "{_id:" + alertString[i]+"},";
+            }
+        }
+        queryString += "]";
+    });
+        Alert.find({createdId:req.user._id}).lean().exec(function(err,alert) {
+            Event.find().lean().exec(function(err, event) {
+                var vm = {
+                    firstName : req.user.firstName,
+                    lastName : req.user.lastName,
+                    id: req.user._id,
+                    event: event,
+                    alert: alert,
+                    address: req.user.address,
+                    city: req.user.city,
+                    state: req.user.state,
+                    created: dateString
+                };
+                res.render('cloud',vm);
+            });
 
     });
 
@@ -125,11 +147,6 @@ router.post('/receiveEvent', function(req,res,next){
         }
 
     });
-
-    var newEventNotification = new EventNotification({
-
-    });
-
 
 
     res.sendStatus(200);
@@ -237,6 +254,12 @@ router.get('/getuser', function(req,res,next){
 
 router.get('/getcontacts',function(req,res,next){
     Contact.find({userId: req.user._id}).lean().exec(function(err,docs){
+        res.send(docs);
+    });
+});
+
+router.get('/geteventnotif',function(req,res,next){
+    EventNotification.find({}).lean().exec(function(err,docs){
         res.send(docs);
     });
 });
