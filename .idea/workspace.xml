@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/routes/cloud.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="176" column="23" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="23" />
+              <caret line="185" column="23" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="cloud.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47085202">
-              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.67264575">
+              <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -597,12 +597,12 @@
       <workItem from="1445938410778" duration="2593000" />
       <workItem from="1445990170635" duration="3037000" />
       <workItem from="1446074576916" duration="382000" />
-      <workItem from="1446174194045" duration="179000" />
+      <workItem from="1446174194045" duration="347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37159000" />
+    <option name="totallyTimeSpent" value="37327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -1033,15 +1033,15 @@
     <entry file="file://$PROJECT_DIR$/routes/cloud.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="176" column="23" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="23" />
+          <caret line="185" column="23" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47085202">
-          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.67264575">
+          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
           <folding />
         </state>
       </provider>
