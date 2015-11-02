@@ -44,6 +44,9 @@ router.get('/', restrict, function(req, res, next) {
                     var vm = {
                         firstName : req.user.firstName,
                         lastName : req.user.lastName,
+                        address: req.user.address,
+                        city: req.user.city,
+                        state: req.user.state,
                         id: req.user._id,
                         event: event,
                         alert: alert,
