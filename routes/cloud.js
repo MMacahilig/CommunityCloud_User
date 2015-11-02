@@ -38,9 +38,9 @@ router.get('/', restrict, function(req, res, next) {
             }
         }
         queryString += "]";
-        Event.find({ _id:{$in: alertString }}).lean().exec(function(err,event){
+        Event.find({ _id:{$in: alertString }}).sort({created: 'desc'}).lean().exec(function(err,event){
             if(event){
-                Alert.find().lean().exec(function(err, alert) {
+                Alert.find().sort({created: 'desc'}).lean().exec(function(err, alert) {
                     var vm = {
                         firstName : req.user.firstName,
                         lastName : req.user.lastName,
