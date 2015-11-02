@@ -82,13 +82,14 @@ router.get('/', restrict, function(req, res, next) {
 
 router.post('/alert', function(req, res, next) {
     //console.log("trigger");
-    console.log("query Body:" + req.body);
+    //console.log("query Body:" + req.body);
     var newAlert = new Alert ({
         alertType: req.body.alertType,
         details: req.body.details,
         address: req.body.address,
         city: req.body.city,
         state: req.body.state,
+        rating: req.body.rating,
         createdBy: req.body.createdBy,
         createdId: req.body.createdId,
         created: Date.now()
