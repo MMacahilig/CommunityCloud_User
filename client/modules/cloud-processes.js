@@ -34,7 +34,7 @@
         var rating = $("#alertRating").val();
         var userId = $("#userID").html();
         var userName = $("#username").html();
-        console.log(userId);
+        console.log(rating);
 
         $.ajax({
             url:"http://communitycloud.herokuapp.com/cloud/alert",
