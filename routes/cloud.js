@@ -221,6 +221,9 @@ router.post('/mobileAlert', function(req, res, next) {
         AlertType: req.body.AlertType,
         details: req.body.details,
         location: req.body.location,
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
         rating: req.body.rating,
         createdId: req.body._id,
         createdBy: req.name,
@@ -296,6 +299,7 @@ router.post('/pialert', function(req,res,next){
         address: req.body.address,
         city: req.body.city,
         state: req.body.state,
+        rating: req.body.rating,
         createdBy: req.body.createdBy,
         createdId: req.body.createdId,
         created: Date.now()
