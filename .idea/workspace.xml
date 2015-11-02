@@ -47,9 +47,11 @@
       <file leaf-file-name="cloud.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3579953">
-              <caret line="135" column="69" selection-start-line="135" selection-start-column="69" selection-end-line="135" selection-end-column="69" />
-              <folding />
+            <state vertical-scroll-proportion="0.6778043">
+              <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+              <folding>
+                <marker date="1446441800000" expanded="true" signature="4339:5529" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -608,12 +610,12 @@
       <workItem from="1445990170635" duration="3037000" />
       <workItem from="1446074576916" duration="382000" />
       <workItem from="1446174194045" duration="1015000" />
-      <workItem from="1446436009435" duration="1535000" />
+      <workItem from="1446436009435" duration="2050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39530000" />
+    <option name="totallyTimeSpent" value="40045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -664,7 +666,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="120" column="57" selection-start-line="120" selection-start-column="57" selection-end-line="120" selection-end-column="57" />
-          <folding />
+          <folding>
+            <marker date="1446441800000" expanded="true" signature="4339:5529" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -719,7 +723,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1446441800000" expanded="true" signature="4339:5529" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -774,7 +780,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="268" column="44" selection-start-line="268" selection-start-column="44" selection-end-line="268" selection-end-column="44" />
-          <folding />
+          <folding>
+            <marker date="1446441800000" expanded="true" signature="4339:5529" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -829,7 +837,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="268" column="44" selection-start-line="268" selection-start-column="44" selection-end-line="268" selection-end-column="44" />
-          <folding />
+          <folding>
+            <marker date="1446441800000" expanded="true" signature="4339:5529" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -884,7 +894,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1446441800000" expanded="true" signature="4339:5529" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,9 +1063,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3579953">
-          <caret line="135" column="69" selection-start-line="135" selection-start-column="69" selection-end-line="135" selection-end-column="69" />
-          <folding />
+        <state vertical-scroll-proportion="0.6778043">
+          <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+          <folding>
+            <marker date="1446441800000" expanded="true" signature="4339:5529" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
