@@ -91,7 +91,8 @@ router.post('/mobilelogin',
     }));
 
 router.get('/mobilelogin', function(req,res,next) {
-  res.send(200);
+  //res.send(200);
+  res.send(req.user);
 });
 
 router.get('/pass', function(req,res,next){
