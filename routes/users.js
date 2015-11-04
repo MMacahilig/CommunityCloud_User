@@ -109,13 +109,16 @@ router.get('/pass', function(req,res,next){
     homePhone: req.user.homePhone,
     mobilePhone: req.user.mobilePhone,
     created: req.user.created
-    
+
   }
   res.send(vm);
 });
 
 router.get('/fail', function(req,res,next){
-  res.send(401);
+  vm = {
+    status: 401,
+  };
+  res.send(vm);
 });
 
 /**
