@@ -255,6 +255,52 @@ router.delete('/deleteAlerts', function(req, res, next) {
     res.send(200);
 });
 
+router.get('/getuserevents', function(req,res,next){
+
+    res.send(req.query);
+    //EventNotification.find({UserId: req.user._id}).lean().exec(function(err,docs) {
+    //    var alertString = [];
+    //    var queryString = "[";
+    //    var i = 0;
+    //
+    //    if(docs){
+    //        for (var key in docs) {
+    //            //console.log("key:" + docs[key].alertId);
+    //            alertString.push(docs[key].eventId);
+    //        }
+    //    }
+    //    //console.log("alerts: " + alertString);
+    //    for (var i = 0; i < alertString.length; i++) {
+    //        if(i == alertString.length -1){
+    //            queryString += "{_id:" + alertString[i]+"}";
+    //        }else{
+    //            queryString += "{_id:" + alertString[i]+"},";
+    //        }
+    //    }
+    //    queryString += "]";
+    //    Event.find({ _id:{$in: alertString }}).sort({created: 'desc'}).lean().exec(function(err,event){
+    //        if(event){
+    //            Alert.find().sort({created: 'desc'}).lean().exec(function(err, alert) {
+    //                var vm = {
+    //                    firstName : req.user.firstName,
+    //                    lastName : req.user.lastName,
+    //                    address: req.user.address,
+    //                    city: req.user.city,
+    //                    state: req.user.state,
+    //                    id: req.user._id,
+    //                    event: event,
+    //                    alert: alert,
+    //                    created: dateString
+    //                };
+    //                res.render('cloud',vm);
+    //            });
+    //        }
+    //    });
+    //});
+
+});
+
+
 router.get('/getEvents', function(req,res,next){
 
    Event.find(function(err, alert) {
