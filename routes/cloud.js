@@ -257,8 +257,7 @@ router.delete('/deleteAlerts', function(req, res, next) {
 
 router.get('/getuserevents', function(req,res,next){
 
-
-    EventNotification.find({UserId: req.query._id}).lean().exec(function(err,docs) {
+    EventNotification.find({UserId: req.query.id}).lean().exec(function(err,docs) {
         var alertString = [];
         var queryString = "[";
         var i = 0;
