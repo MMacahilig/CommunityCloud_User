@@ -348,6 +348,15 @@ router.post('/pialert', function(req,res,next){
     newAlert.save();
     res.send(JSON.stringify(req.body));
 });
+
+router.put('/setlocation', function(req,res,next){
+    var id = req.body.id;
+    User.findOne({_id:id},function(err, user){
+       user.location = req.body.longitude;
+        user.save();
+    });
+});
+
 router.get('/getAlerts', function(req,res,next){
 
     Alert.find(function(err, alert) {
@@ -359,6 +368,8 @@ router.get('/getAlerts', function(req,res,next){
      });*/
 
 });
+
+
 
 
 
