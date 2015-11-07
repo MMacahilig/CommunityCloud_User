@@ -352,7 +352,8 @@ router.post('/pialert', function(req,res,next){
 router.put('/setlocation', function(req,res,next){
     var id = req.body.id;
     User.findOne({_id:id},function(err, user){
-       user.location = req.body.longitude;
+       user.city = req.body.city;
+        user.state = req.body.state;
         user.save();
     });
 });
