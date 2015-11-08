@@ -356,6 +356,8 @@ router.put('/setlocation', function(req,res,next){
         user.state = req.body.state;
         user.save();
     });
+
+    res.send(200);
 });
 
 router.get('/getAlerts', function(req,res,next){
