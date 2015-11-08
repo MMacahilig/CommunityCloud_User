@@ -351,21 +351,20 @@ router.post('/pialert', function(req,res,next){
 
 router.put('/setlocation', function(req,res,next){
     var id = req.body.id;
-    User.findOne({_id:id},function(err, user){
-        console.log("SEARCHING");
-        console.log("PUT BODY: " + req.body.city);
-       user.city = req.body.city;
-        user.state = req.body.state;
-        user.save();
-
-        user.save(function (err) {
-            if(err){
-                console.log(err);
-                return next(err);
-            }
-            next(null);
-        });
-    });
+    User.findOneAndUpdate({_id:id},{location:req.body.city});
+    console.log("SEARCHING");
+    //console.log("PUT BODY: " + req.body.city);
+    //user.city = req.body.city;
+    //user.state = req.body.state;
+    //user.save();
+    //
+    //user.save(function (err) {
+    //    if(err){
+    //        console.log(err);
+    //        return next(err);
+    //    }
+    //    next(null);
+    //});
 
     res.send(200);
 });
