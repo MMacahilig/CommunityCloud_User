@@ -357,6 +357,14 @@ router.put('/setlocation', function(req,res,next){
        user.city = req.body.city;
         user.state = req.body.state;
         user.save();
+
+        user.save(function (err) {
+            if(err){
+                console.log(err);
+                return next(err);
+            }
+            next(null);
+        });
     });
 
     res.send(200);
