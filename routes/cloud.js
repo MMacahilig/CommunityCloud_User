@@ -353,7 +353,7 @@ router.put('/setlocation', function(req,res,next){
     var id = req.body.id;
     User.findOne({_id:id},function(err, user){
         console.log("SEARCHING");
-        console.log("PUT BODY: " + req.body);
+        console.log("PUT BODY: " + req.body.city);
        user.city = req.body.city;
         user.state = req.body.state;
         user.save();
