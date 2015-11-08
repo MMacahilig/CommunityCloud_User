@@ -351,8 +351,14 @@ router.post('/pialert', function(req,res,next){
 
 router.put('/setlocation', function(req,res,next){
     var id = req.body.id;
-    User.findOneAndUpdate({_id:id},{currentLocation:req.body.city});
-    console.log("SEARCHING");
+    //User.findOneAndUpdate({_id:id},{currentLocation:req.body.city});
+    User.findOne({_id:req.body.id},function(err,docs){
+        if(docs){
+            console.log("SEARCHING");
+            docs.currentLocation = req.body.city;
+        }
+    });
+
     //console.log("PUT BODY: " + req.body.city);
     //user.city = req.body.city;
     //user.state = req.body.state;
