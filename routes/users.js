@@ -5,7 +5,8 @@ var passport = require('passport');
 var config = require('../config');
 var User = require('../models/user').User;
 var EventNotification = require('../models/event-notifications').EventNotification;
-
+var Alert = require('../models/alert').Alert;
+var Event = require('../models/event').Event;
 
 
 /* GET users listing. */
