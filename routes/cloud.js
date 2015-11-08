@@ -357,6 +357,7 @@ router.put('/setlocation', function(req,res,next){
         if(docs){
             console.log("SEARCHING");
             docs.currentLocation = req.body.city;
+            docs.save();
             console.log(docs);
         }
     });
