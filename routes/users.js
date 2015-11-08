@@ -78,7 +78,7 @@ router.post('/login',
 
 router.post('/mobilelogin',
     function(req, res, next){
-      console.log(req.body);
+      //console.log(req.body);
 
       sess = req.session;
       next();
