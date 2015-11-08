@@ -18,6 +18,7 @@ exports.addUser = function(user, next){
             city: user.city,
             postcode: user.postcode,
             state: user.state,
+            currentLocation: "",
             created: Date.now()
         });
 
