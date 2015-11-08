@@ -4,6 +4,7 @@ var userService = require('../services/user-service');
 var passport = require('passport');
 var config = require('../config');
 var User = require('../models/user').User;
+var EventNotification = require('../models/event-notifications').EventNotification;
 
 
 
@@ -94,24 +95,74 @@ router.get('/mobilelogin', function(req,res,next) {
   res.send(200);
 
 });
-
+//
+//router.get('/pass', function(req,res,next){
+//  vm = {
+//    status: 200,
+//    id: req.user._id,
+//    firstName: req.user.firstName,
+//    lastName: req.user.lastName,
+//    email: req.user.email,
+//    address:  req.user.email,
+//    city: req.user.city,
+//    postcode: req.user.postcode,
+//    state: req.user.state,
+//    homePhone: req.user.homePhone,
+//    mobilePhone: req.user.mobilePhone,
+//    created: req.user.created
+//
+//  }
+//  res.send(vm);
+//});
 router.get('/pass', function(req,res,next){
-  vm = {
-    status: 200,
-    id: req.user._id,
-    firstName: req.user.firstName,
-    lastName: req.user.lastName,
-    email: req.user.email,
-    address:  req.user.email,
-    city: req.user.city,
-    postcode: req.user.postcode,
-    state: req.user.state,
-    homePhone: req.user.homePhone,
-    mobilePhone: req.user.mobilePhone,
-    created: req.user.created
 
-  }
-  res.send(vm);
+  EventNotification.find({UserId: req.user._id}).lean().exec(function(err,docs) {
+    var alertString = [];
+    var queryString = "[";
+    var i = 0;
+
+    if(docs){
+      for (var key in docs) {
+        //console.log("key:" + docs[key].alertId);
+        alertString.push(docs[key].eventId);
+      }
+    }
+    //console.log("alerts: " + alertString);
+    for (var i = 0; i < alertString.length; i++) {
+      if(i == alertString.length -1){
+        queryString += "{_id:" + alertString[i]+"}";
+      }else{
+        queryString += "{_id:" + alertString[i]+"},";
+      }
+    }
+    queryString += "]";
+    Event.find({ _id:{$in: alertString }}).sort({created: 'desc'}).lean().exec(function(err,event){
+      if(event){
+        Alert.find().sort({created: 'desc'}).lean().exec(function(err, alert) {
+          vm = {
+            status: 200,
+            id: req.user._id,
+            firstName: req.user.firstName,
+            lastName: req.user.lastName,
+            email: req.user.email,
+            address:  req.user.email,
+            city: req.user.city,
+            postcode: req.user.postcode,
+            state: req.user.state,
+            homePhone: req.user.homePhone,
+            mobilePhone: req.user.mobilePhone,
+            created: req.user.created,
+            event: event,
+            alert: alert
+
+          }
+          res.send(vm);
+        });
+      }
+    });
+  });
+
+
 });
 
 router.get('/fail', function(req,res,next){
