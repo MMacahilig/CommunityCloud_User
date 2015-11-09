@@ -81,7 +81,11 @@ router.get('/', restrict, function(req, res, next) {
 });
 
 router.put('/dismissevent', function(req,res,next){
-    console.log(req.body);
+    //console.log(req.body);
+    EventNotification.findOneAndUpdate({UserId:req.body.id},{dismissed:true},function(err,docs){
+        console.log(err);
+    });
+    res.send(200);
 });
 
 router.post('/alert', function(req, res, next) {
