@@ -80,6 +80,17 @@
     });
 
     $(".close").click(function() {
+        var userId = $("#userID").html();
+        var eventId = $(this).parent().parent().find("#eventId").text();
         $(this).parent().parent().fadeOut();
-
+        $.ajax({
+            url:"http://communitycloud.herokuapp.com/cloud/alert",
+            type: "PUT",
+            data: {
+                id:userId,
+                eventId:eventId
+            }
+        }).done(function(){
+            console.log("saved");
+        });
     });

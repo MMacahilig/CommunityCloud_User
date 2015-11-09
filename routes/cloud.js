@@ -18,7 +18,7 @@ router.get('/', restrict, function(req, res, next) {
     //var dateString = startDate.getDate() + "/" + (startDate.getMonth()+1) + "/" + startDate.getYear();
     //console.log(dateString);
 
-    EventNotification.find({UserId: req.user._id}).lean().exec(function(err,docs) {
+    EventNotification.find({UserId: req.user._id},{dismissed:false}).lean().exec(function(err,docs) {
         var alertString = [];
         var queryString = "[";
         var i = 0;
@@ -78,6 +78,10 @@ router.get('/', restrict, function(req, res, next) {
         //
         //});
 
+});
+
+router.put('/dismiss', function(req,res,next){
+    console.log(req.body);
 });
 
 router.post('/alert', function(req, res, next) {
