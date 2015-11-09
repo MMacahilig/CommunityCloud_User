@@ -84,7 +84,7 @@
         var eventId = $(this).parent().parent().find("#eventId").text();
         $(this).parent().parent().fadeOut();
         $.ajax({
-            url:"http://communitycloud.herokuapp.com/cloud/alert",
+            url:"http://communitycloud.herokuapp.com/cloud/dismissevent",
             type: "PUT",
             data: {
                 id:userId,

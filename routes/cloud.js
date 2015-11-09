@@ -80,7 +80,7 @@ router.get('/', restrict, function(req, res, next) {
 
 });
 
-router.put('/dismiss', function(req,res,next){
+router.put('/dismissevent', function(req,res,next){
     console.log(req.body);
 });
 
