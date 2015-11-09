@@ -210,13 +210,17 @@
                                                     <h5>Details</h5>
 
                                                 </td>
-                                                <td class="col-lg-2 alarm-grade ">
+                                                <td class="col-lg-1 alarm-grade ">
                                                     <h5>Alert Rating</h5>
                                                 </td>
 
                                                 <td class="col-lg-4">
                                                     <h5>Location</h5>
                                                 </td>
+                                                <td class="col-lg-1">
+
+                                                </td>
+
 
                                             </tr>
                                             <!-- Generates rows for each Alert in Database-->
@@ -231,7 +235,7 @@
                                                         <span class="">{{details}}</span><br>
 
                                                     </td>
-                                                    <td class="col-lg-2 alarm-grade text-danger">
+                                                    <td class="col-lg-1 alarm-grade text-danger">
                                                         {{rating}}
                                                     </td>
 
@@ -239,6 +243,9 @@
                                                         <span class="address">{{address}}</span>
                                                         <span class="city">{{city}}</span>
                                                         <span class="state">{{state}}</span>
+                                                    </td>
+                                                    <td class="col-lg-1">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                     </td>
 
                                                 </tr>
