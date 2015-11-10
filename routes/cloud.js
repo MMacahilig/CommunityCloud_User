@@ -269,7 +269,12 @@ router.delete('/deleteEvents', function(req, res, next) {
 router.delete('/deleteAlerts', function(req, res, next) {
     console.log("trigger");
     //Alert.remove({userId:req.body.id},function(){console.log("Deleted Alerts");});
-    Alert.findByIdAndRemove({createdId:req.body.id},function(){console.log("USER ALERTS DELETED")});
+    //Alert.findByIdAndRemove({createdId:req.body.id},function(){console.log("USER ALERTS DELETED")});
+
+    Alert.find({createdId:req.body.Id},function(err,docs){
+        docs.remove();
+    });
+
     res.send(200);
 });
 
