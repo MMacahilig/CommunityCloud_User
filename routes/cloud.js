@@ -155,7 +155,6 @@ router.post('/receiveEvent', function(req,res,next){
     newEvent.save(function (err) {
         if(err){
             console.log(err);
-
         }
         next(null);
     });
