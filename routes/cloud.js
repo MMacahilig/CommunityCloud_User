@@ -272,7 +272,9 @@ router.delete('/deleteAlerts', function(req, res, next) {
     //Alert.findByIdAndRemove({createdId:req.body.id},function(){console.log("USER ALERTS DELETED")});
 
     Alert.find({createdId:req.body.Id},function(err,docs){
-        docs.remove();
+        docs.forEach(function(docs){
+            docs.remove();
+        });
     });
 
     res.send(200);
