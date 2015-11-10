@@ -33,9 +33,7 @@
             type: "DELETE",
             data: {
             id:userId,
-        }
-
-        }).done(function(){
+        }}).done(function(){
             console.log("DELETED");
             location.reload();
         });
