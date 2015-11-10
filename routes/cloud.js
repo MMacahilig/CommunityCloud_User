@@ -268,7 +268,7 @@ router.delete('/deleteEvents', function(req, res, next) {
 
 router.delete('/deleteAlerts', function(req, res, next) {
     console.log("id: " + req.body.id);
-    //Alert.remove({userId:req.body.id},function(){console.log("Deleted Alerts");});
+    Alert.remove({createdId:req.body.id},function(){console.log("Deleted Alerts");});
     //Alert.findByIdAndRemove({createdId:req.body.id},function(){console.log("USER ALERTS DELETED")});
 
     //Alert.find({createdId:req.body.Id},function(err,docs){
@@ -276,7 +276,7 @@ router.delete('/deleteAlerts', function(req, res, next) {
     //        docs.remove();
     //    });
     //});
-    Alert.find({createdId:req.body.id}).remove();
+
 
     res.send(200);
 });
