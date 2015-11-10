@@ -1,27 +1,57 @@
 
 
     $("#deleteEvents").click(function() {
-        console.log("clicked");
-        $.ajax({
-            url: "http://communitycloud.herokuapp.com/cloud/deleteEvents",
-            type: "DELETE",
+        var userId = $("#userID").html();
+        //console.log("clicked");
+        //$.ajax({
+        //    url: "http://communitycloud.herokuapp.com/cloud/deleteEvents",
+        //    type: "DELETE",
+        //
+        //}).done(function(){
+        //    console.log("DELETED");
+        //    location.reload();
+        //});
 
+        $.ajax({
+            url:"http://communitycloud.herokuapp.com/cloud/dismissallevent",
+            type: "PUT",
+            data: {
+                id:userId,
+            }
         }).done(function(){
             console.log("DELETED");
             location.reload();
         });
+
     });
 
     $("#deleteAlerts").click(function() {
+        var userId = $("#userID").html();
         console.log("clicked");
         $.ajax({
             url: "http://communitycloud.herokuapp.com/cloud/deleteAlerts",
             type: "DELETE",
+            data: {
+            id:userId,
+        }
 
         }).done(function(){
             console.log("DELETED");
             location.reload();
         });
+
+        $.ajax({
+            url:"http://communitycloud.herokuapp.com/cloud/dismissallevent",
+            type: "PUT",
+            data: {
+                id:userId,
+            }
+        }).done(function(){
+            console.log("DELETED");
+            location.reload();
+        });
+
+
     });
     $("#sendAlert").click(function(){
         //console.log("Event Sent");

@@ -88,6 +88,15 @@ router.put('/dismissevent', function(req,res,next){
     res.send(200);
 });
 
+router.put('/dismissallevent', function(req,res,next){
+    //console.log(req.body);
+    EventNotification.update({UserId:req.body.id},{dismissed:true},function(err,docs){
+        console.log(err);
+    });
+
+    res.send(200);
+});
+
 router.post('/alert', function(req, res, next) {
     //console.log("trigger");
     //console.log("query Body:" + req.body);
@@ -259,7 +268,7 @@ router.delete('/deleteEvents', function(req, res, next) {
 
 router.delete('/deleteAlerts', function(req, res, next) {
     console.log("trigger");
-    Alert.remove({},function(){console.log("Deleted Alerts");});
+    Alert.remove({userId:req.body.id},function(){console.log("Deleted Alerts");});
     res.send(200);
 });
 
