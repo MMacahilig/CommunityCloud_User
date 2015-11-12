@@ -380,36 +380,47 @@ router.put('/setlocation', function(req,res,next){
     User.findOneAndUpdate({_id:id},{currentLocation:req.body.city},function(err,docs){
         console.log(err);
     });
-    //User.findOne({_id:req.body.id},function(err,docs){
-    //    if(docs){
-    //        console.log("SEARCHING");
-    //        docs.currentLocation = req.body.city;
-    //        //docs.save();
-    //        docs.save(function (err) {
-    //            if(err){
-    //                console.log(err);
-    //                return next(err);
-    //            }
-    //            next(null);
-    //        });
-    //        console.log(docs);
-    //    }
-    //});
-
-    //console.log("PUT BODY: " + req.body.city);
-    //user.city = req.body.city;
-    //user.state = req.body.state;
-    //user.save();
-    //
-    //user.save(function (err) {
-    //    if(err){
-    //        console.log(err);
-    //        return next(err);
-    //    }
-    //    next(null);
-    //});
 
     res.send(200);
+});
+
+
+router.get('/refreshmobile',function(req,res,next){
+    EventNotification.find({UserId: req.user._id}).lean().exec(function(err,docs) {
+        var alertString = [];
+        var queryString = "[";
+        var i = 0;
+
+        if(docs){
+            for (var key in docs) {
+                //console.log("key:" + docs[key].alertId);
+                alertString.push(docs[key].eventId);
+            }
+        }
+        //console.log("alerts: " + alertString);
+        for (var i = 0; i < alertString.length; i++) {
+            if(i == alertString.length -1){
+                queryString += "{_id:" + alertString[i]+"}";
+            }else{
+                queryString += "{_id:" + alertString[i]+"},";
+            }
+        }
+        queryString += "]";
+        Event.find({ _id:{$in: alertString }}).sort({created: 'desc'}).lean().exec(function(err,event){
+            if(event){
+                Alert.find().sort({created: 'desc'}).lean().exec(function(err, alert) {
+                    vm = {
+                        event: event,
+                        alert: alert
+
+                    }
+                    res.send(vm);
+                });
+            }
+        });
+    });
+
+
 });
 
 router.get('/getAlerts', function(req,res,next){

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="44d080e1-c248-4e18-b0fc-5fa6799b8878" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/cloud.js" afterPath="$PROJECT_DIR$/routes/cloud.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Heroku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="cloud.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/cloud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0067873304">
-              <caret line="156" column="29" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.3715499">
+              <caret line="425" column="5" selection-start-line="425" selection-start-column="3" selection-end-line="425" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -67,7 +68,7 @@
       <file leaf-file-name="cloud.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
+            <state vertical-scroll-proportion="0.0">
               <caret line="196" column="87" selection-start-line="196" selection-start-column="75" selection-end-line="196" selection-end-column="87" />
               <folding />
             </state>
@@ -88,8 +89,10 @@
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-              <folding />
+              <caret line="164" column="0" selection-start-line="119" selection-start-column="2" selection-end-line="164" selection-end-column="0" />
+              <folding>
+                <element signature="e#3625#4304#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,9 +126,9 @@
         <option value="$PROJECT_DIR$/models/event.js" />
         <option value="$PROJECT_DIR$/models/event-notifications.js" />
         <option value="$PROJECT_DIR$/services/user-service.js" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/views/cloud.hbs" />
         <option value="$PROJECT_DIR$/client/modules/cloud-processes.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/routes/cloud.js" />
       </list>
     </option>
@@ -175,8 +178,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -318,6 +319,8 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -621,12 +624,13 @@
       <workItem from="1446898503650" duration="555000" />
       <workItem from="1446938345972" duration="4025000" />
       <workItem from="1447043284229" duration="1152000" />
-      <workItem from="1447106858565" duration="5949000" />
+      <workItem from="1447106858565" duration="6080000" />
+      <workItem from="1447369573000" duration="1597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58209000" />
+    <option name="totallyTimeSpent" value="59937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -636,7 +640,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32655826" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32567567" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -691,7 +695,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#3625#4304#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -742,7 +748,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#3625#4304#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -793,7 +801,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#3625#4304#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -844,7 +854,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#3625#4304#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -888,7 +900,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#3625#4304#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -992,14 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/modules/cloud-processes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1010,7 +1016,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/cloud.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
+        <state vertical-scroll-proportion="0.0">
           <caret line="196" column="87" selection-start-line="196" selection-start-column="75" selection-end-line="196" selection-end-column="87" />
           <folding />
         </state>
@@ -1040,10 +1046,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="164" column="0" selection-start-line="119" selection-start-column="2" selection-end-line="164" selection-end-column="0" />
+          <folding>
+            <element signature="e#3625#4304#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/cloud.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0067873304">
-          <caret line="156" column="29" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.3715499">
+          <caret line="425" column="5" selection-start-line="425" selection-start-column="3" selection-end-line="425" selection-end-column="5" />
           <folding />
         </state>
       </provider>
