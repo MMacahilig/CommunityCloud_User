@@ -90,8 +90,12 @@ router.put('/dismissevent', function(req,res,next){
 
 router.put('/dismissallevent', function(req,res,next){
     //console.log(req.body);
-    EventNotification.update({UserId:req.body.id},{dismissed:true},function(err,docs){
-        console.log(err);
+    //EventNotification.update({UserId:req.body.id},{dismissed:true},function(err,docs){
+    //    console.log("error"  +err);
+    //});
+
+    EventNotification.find({UserId:req.body.id},function(err,docs){
+        docs.dismissed = true;
     });
 
     res.send(200);

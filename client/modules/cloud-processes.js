@@ -38,16 +38,16 @@
             location.reload();
         });
 
-        $.ajax({
-            url:"http://communitycloud.herokuapp.com/cloud/dismissallevent",
-            type: "PUT",
-            data: {
-                id:userId,
-            }
-        }).done(function(){
-            console.log("DELETED");
-            location.reload();
-        });
+        //$.ajax({
+        //    url:"http://communitycloud.herokuapp.com/cloud/dismissallevent",
+        //    type: "PUT",
+        //    data: {
+        //        id:userId,
+        //    }
+        //}).done(function(){
+        //    console.log("DELETED");
+        //    location.reload();
+        //});
 
 
     });

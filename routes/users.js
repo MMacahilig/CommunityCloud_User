@@ -68,7 +68,7 @@ router.post('/login',
       if(req.body.rememberMe){
         req.session.cookie.maxAge = config.cookieMaxAge;
       }
-      
+
       sess = req.session;
       next();
     },
