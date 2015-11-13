@@ -58,11 +58,11 @@
                     <h3>User Details</h3>
                     <div class="form-group">
                         <label for="userFirstName">First Name</label>
-                        <input type="text" class="form-control" id="userFirstName"name="firstName" placeholder="First Name" value="{{input.firstName}}">
+                        <input type="text" class="form-control" id="userFirstName"name="firstName" placeholder="First Name" value="{{input.firstName}}" required>
                     </div>
                     <div class="form-group">
                         <label for="userLastName">Last Name</label>
-                        <input type="text" class="form-control" id="userLastName" name="lastName" placeholder="Last Name" value="{{input.lastName}}">
+                        <input type="text" class="form-control" id="userLastName" name="lastName" placeholder="Last Name" value="{{input.lastName}}" required>
                     </div>
 
                 </div>
@@ -72,27 +72,27 @@
 
                     <div class="form-group">
                         <label for="userHomePhone">Home Phone</label>
-                        <input type="text" class="form-control" id="userHomePhone" name="homePhone" placeholder="Home Phone Number" value="{{input.homePhone}}">
+                        <input type="text" class="form-control" id="userHomePhone" name="homePhone" maxlength="10" placeholder="Home Phone Number" value="{{input.homePhone}}" required>
                     </div>
 
                     <div class="form-group">
                         <label for="userMobilePhone">Mobile Phone</label>
-                        <input type="text" class="form-control" id="userMobilePhone" name="mobilePhone" placeholder="Mobile Phone Number" value="{{input.mobilePhone}}">
+                        <input type="text" class="form-control" id="userMobilePhone" name="mobilePhone" maxlength="10" placeholder="Mobile Phone Number" value="{{input.mobilePhone}}" required>
                     </div>
 
                     <div class="form-group">
                         <label for="userAddress">Home Address</label>
-                        <input type="text" class="form-control" id="userAddress" name="address" placeholder="Number and Street" value="{{input.address}}">
+                        <input type="text" class="form-control" id="userAddress" name="address" placeholder="Number and Street" value="{{input.address}}" required>
                     </div>
 
                     <div class="form-group">
                         <label for="userCity">City</label>
-                        <input type="text" class="form-control" id="userCity" name="city" placeholder="City or Suburb" value="{{input.city}}">
+                        <input type="text" class="form-control" id="userCity" name="city"  placeholder="City or Suburb" value="{{input.city}}" required>
                     </div>
 
                     <div class="form-group">
                         <label for="userPostCode">Postcode</label>
-                        <input type="text" class="form-control" id="userPostCode" name="postcode" maxlength="4" placeholder="e.g. 2000" value="{{input.postcode}}">
+                        <input type="text" class="form-control" id="userPostCode" name="postcode" maxlength="4" placeholder="e.g. 2000" value="{{input.postcode}}" required>
                     </div>
 
 
