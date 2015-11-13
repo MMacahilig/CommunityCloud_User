@@ -68,11 +68,7 @@ router.post('/login',
       if(req.body.rememberMe){
         req.session.cookie.maxAge = config.cookieMaxAge;
       }
-
-      if(req.body.password != req.body.confirmPassword){
-        vm = {error: "Password does not match"}
-        res.redirect()
-      }
+      
       sess = req.session;
       next();
     },
