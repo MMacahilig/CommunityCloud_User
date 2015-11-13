@@ -386,7 +386,8 @@ router.put('/setlocation', function(req,res,next){
 
 
 router.get('/refreshmobile',function(req,res,next){
-    EventNotification.find({UserId: req.query._id}).lean().exec(function(err,docs) {
+    console.log(req.query);
+    EventNotification.find({UserId: req.query.id}).lean().exec(function(err,docs) {
         var alertString = [];
         var queryString = "[";
         var i = 0;
