@@ -139,7 +139,7 @@ router.get('/pass', function(req,res,next){
     queryString += "]";
     Event.find({ _id:{$in: alertString }}).sort({created: 'desc'}).lean().exec(function(err,event){
       if(event){
-        Alert.find().sort({created: 'desc'}).lean().exec(function(err, alert) {
+        Alert.find({createdId:req.user._id}).sort({created: 'desc'}).lean().exec(function(err, alert) {
           vm = {
             status: 200,
             id: req.user._id,

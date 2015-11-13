@@ -386,7 +386,7 @@ router.put('/setlocation', function(req,res,next){
 
 
 router.get('/refreshmobile',function(req,res,next){
-    EventNotification.find({UserId: req.user._id}).lean().exec(function(err,docs) {
+    EventNotification.find({UserId: req.query._id}).lean().exec(function(err,docs) {
         var alertString = [];
         var queryString = "[";
         var i = 0;
@@ -408,7 +408,7 @@ router.get('/refreshmobile',function(req,res,next){
         queryString += "]";
         Event.find({ _id:{$in: alertString }}).sort({created: 'desc'}).lean().exec(function(err,event){
             if(event){
-                Alert.find().sort({created: 'desc'}).lean().exec(function(err, alert) {
+                Alert.find({createdId:req.query.id}).sort({created: 'desc'}).lean().exec(function(err, alert) {
                     vm = {
                         event: event,
                         alert: alert
