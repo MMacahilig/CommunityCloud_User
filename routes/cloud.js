@@ -130,17 +130,19 @@ router.post('/alert', function(req, res, next) {
 });
 
 router.post('/receiveEvent', function(req,res,next){
-    res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
+
+
+    req.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
 
     // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    req.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
     // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    req.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 
     // Set to true if you need the website to include cookies in the requests sent
     // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
+    req.setHeader('Access-Control-Allow-Credentials', true);
 
     console.log("RECEIVED");
 
