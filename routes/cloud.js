@@ -95,7 +95,10 @@ router.put('/dismissallevent', function(req,res,next){
     //});
 
     EventNotification.find({UserId:req.body.id},function(err,docs){
-        docs.dismissed = true;
+        docs.forEach(function(doc){
+            doc.dismissed = true;
+            doc.save();
+        });
     });
 
     res.send(200);
