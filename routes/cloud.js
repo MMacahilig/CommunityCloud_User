@@ -170,6 +170,7 @@ router.post('/receiveEvent', function(req,res,next){
     var eventState = newEvent.state;
     var eventCity = newEvent.city;
 
+    console.log("state: " + eventState + " ,city: " + eventCity);
     //User.find({$or:[ {city:eventCity},{state: eventState}]},function(err,user){
     User.find({city:eventCity,state: eventState},function(err,user){
         console.log("searching");
