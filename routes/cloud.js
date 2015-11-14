@@ -207,8 +207,8 @@ router.post('/receiveEvent', function(req,res,next){
     });
 
 
-    //res.sendStatus(200);
-    res.end
+    res.send("OK");
+    //res.end
 
 
 });
