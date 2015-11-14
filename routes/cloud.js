@@ -143,6 +143,14 @@ router.post('/receiveEvent', function(req,res,next){
     //// Set to true if you need the website to include cookies in the requests sent
     //// to the API (e.g. in case you use sessions)
     //req.setHeader('Access-Control-Allow-Credentials', true);
+
+    res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
 
 
@@ -199,7 +207,8 @@ router.post('/receiveEvent', function(req,res,next){
     });
 
 
-    res.sendStatus(200);
+    //res.sendStatus(200);
+    res.end
 
 
 });
