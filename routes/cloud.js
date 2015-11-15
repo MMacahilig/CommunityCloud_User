@@ -144,14 +144,14 @@ router.post('/receiveEvent', function(req,res,next){
     //// to the API (e.g. in case you use sessions)
     //req.setHeader('Access-Control-Allow-Credentials', true);
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
+    //res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
+    //
+    //// Request methods you wish to allow
+    //res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    //
+    //// Request headers you wish to allow
+    //res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    //res.setHeader('Access-Control-Allow-Credentials', true);
 
 
     console.log("RECEIVED");
