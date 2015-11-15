@@ -237,7 +237,7 @@ router.post('/receiveEvent', function(req,res,next){
 
 
 
-    res.send("OK");
+    //res.send("OK");
     //res.end
 
 
