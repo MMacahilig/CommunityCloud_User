@@ -172,7 +172,7 @@ router.post('/receiveEvent', function(req,res,next){
         if(err){
             console.log(err);
         }
-        next(null);
+        //next(null);
     });
 
     var eventState = newEvent.state;
@@ -199,7 +199,7 @@ router.post('/receiveEvent', function(req,res,next){
                             console.log(err);
                             //return next(err);
                         }
-                        next(null);
+                        //next(null);
                     });
                 });
 
@@ -225,7 +225,7 @@ router.post('/receiveEvent', function(req,res,next){
                             console.log(err);
                             //return next(err);
                         }
-                        next(null);
+                        //next(null);
                     });
                 });
 
