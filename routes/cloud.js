@@ -124,7 +124,7 @@ router.post('/alert', function(req, res, next) {
         next(null);
     });
 
-    res.sendStatus(200);
+    res.send("OK");
 
     //res.redirect('/');
 });
