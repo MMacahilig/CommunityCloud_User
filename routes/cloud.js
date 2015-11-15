@@ -124,7 +124,7 @@ router.post('/alert', function(req, res, next) {
         next(null);
     });
 
-    res.send("OK");
+    //res.send("OK");
 
     //res.redirect('/');
 });
@@ -239,7 +239,6 @@ router.post('/receiveEvent', function(req,res,next){
 
     //res.send("OK");
     //res.end
-
 
 });
 
