@@ -104,7 +104,7 @@
             location.reload();
         });
 
-
+        location.reload();
     });
 
     $(".close").click(function() {
