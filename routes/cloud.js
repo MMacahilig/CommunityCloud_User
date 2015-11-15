@@ -89,7 +89,7 @@ router.put('/dismissevent', function(req,res,next){
 });
 
 router.put('/dismissallevent', function(req,res,next){
-    
+
 
     EventNotification.find({UserId:req.body.id},function(err,docs){
         docs.forEach(function(doc){
@@ -144,14 +144,14 @@ router.post('/receiveEvent', function(req,res,next){
     //// to the API (e.g. in case you use sessions)
     //req.setHeader('Access-Control-Allow-Credentials', true);
 
-    //res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
-    //
-    //// Request methods you wish to allow
-    //res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    //
-    //// Request headers you wish to allow
-    //res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    //res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
 
 
     console.log("RECEIVED");
