@@ -9,14 +9,17 @@ var EventNotification = require('../models/event-notifications').EventNotificati
 var restrict = require('../auth/restrict');
 
 
-/* GET home page. */
+/*****
+ * HTTP GET '/'
+ *
+ * This route renders the user dashboard and grabs the user specific alerts and events
+ * This route provides the user information displayed on the secondary window
+ *
+ */
 
 router.get('/', restrict, function(req, res, next) {
-    //console.log(req.user.created);
     var startDate = new Date(req.user.created);
     var dateString = startDate.getDate() + "/" + startDate.getMonth() + "/" + startDate.getYear();
-    //var dateString = startDate.getDate() + "/" + (startDate.getMonth()+1) + "/" + startDate.getYear();
-    //console.log(dateString);
 
     EventNotification.find({UserId: req.user._id,dismissed:false}).lean().exec(function(err,docs) {
         var alertString = [];
@@ -25,11 +28,9 @@ router.get('/', restrict, function(req, res, next) {
 
         if(docs){
             for (var key in docs) {
-                //console.log("key:" + docs[key].alertId);
                 alertString.push(docs[key].eventId);
             }
         }
-        //console.log("alerts: " + alertString);
         for (var i = 0; i < alertString.length; i++) {
             if(i == alertString.length -1){
                 queryString += "{_id:" + alertString[i]+"}";
@@ -58,36 +59,29 @@ router.get('/', restrict, function(req, res, next) {
         });
     });
 
-
-
-        //Alert.find({createdId:req.user._id}).lean().exec(function(err,alert) {
-        //    Event.find().lean().exec(function(err, event) {
-        //        var vm = {
-        //            firstName : req.user.firstName,
-        //            lastName : req.user.lastName,
-        //            id: req.user._id,
-        //            event: event,
-        //            alert: alert,
-        //            address: req.user.address,
-        //            city: req.user.city,
-        //            state: req.user.state,
-        //            created: dateString
-        //        };
-        //        res.render('cloud',vm);
-        //    });
-        //
-        //});
-
 });
 
+/**
+ *
+ * HTTP PUT '/dismissevent'
+ *
+ * This PUT request retrieves the user's selected event notification and changes the dismissed attribute to TRUE
+ *
+ */
 router.put('/dismissevent', function(req,res,next){
-    //console.log(req.body);
     EventNotification.findOneAndUpdate({UserId:req.body.id},{dismissed:true},function(err,docs){
         console.log(err);
     });
     res.send(200);
 });
 
+/**
+ *
+ * HTTP PUT '/dismissallevent'
+ *
+ * This HTTP PUT finds all the user event notifications and changes the dismiss attribute to TRUE
+ *
+ * */
 router.put('/dismissallevent', function(req,res,next){
 
 
@@ -101,6 +95,15 @@ router.put('/dismissallevent', function(req,res,next){
     res.send(200);
 });
 
+
+/**
+ *
+ * HTTP POST '/alert'
+ *
+ * When the user sends an alert message, this post route generates a record of the alert and stores it in the
+ * client database
+ *
+ * */
 router.post('/alert', function(req, res, next) {
     //console.log("trigger");
     //console.log("query Body:" + req.body);
@@ -129,6 +132,7 @@ router.post('/alert', function(req, res, next) {
     //res.redirect('/');
 });
 
+
 router.post('/receiveEvent', function(req,res,next){
 
 
@@ -154,8 +158,6 @@ router.post('/receiveEvent', function(req,res,next){
     //res.setHeader('Access-Control-Allow-Credentials', true);
 
 
-    console.log("RECEIVED");
-
     var newEvent = new Event({
         alertType: req.body.alertType,
         details: req.body.details,
@@ -179,9 +181,10 @@ router.post('/receiveEvent', function(req,res,next){
     var eventCity = newEvent.city;
 
 
-    console.log("state: " + eventState + " ,city: " + eventCity);
     if(eventCity == ""){
-        User.find({state: eventState},function(err,user){
+        //new RegExp('^'+req.query.eventState, "i")
+        //User.find({state: eventState},function(err,user){
+        User.find({state: new RegExp('^'+eventState, "i")},function(err,user){
             console.log("searching");
             if(user){
                 user.forEach(function(user){
@@ -207,8 +210,8 @@ router.post('/receiveEvent', function(req,res,next){
 
         });
     }else{
-        User.find({city:eventCity,state: eventState},function(err,user){
-            console.log("searching");
+        //User.find({city:eventCity,state: eventState},function(err,user){
+        User.find({city:new RegExp('^'+eventCity, "i"),state: new RegExp('^'+eventState, "i")},function(err,user){
             if(user){
                 user.forEach(function(user){
                     var newEventNotification = new EventNotification ({
@@ -233,10 +236,6 @@ router.post('/receiveEvent', function(req,res,next){
 
         });
     }
-    //User.find({$or:[ {city:eventCity},{state: eventState}]},function(err,user){
-
-
-
     //res.send("OK");
     //res.end
 
@@ -316,15 +315,6 @@ router.delete('/deleteEvents', function(req, res, next) {
 router.delete('/deleteAlerts', function(req, res, next) {
     console.log("id: " + req.body.id);
     Alert.remove({createdId:req.body.id},function(){console.log("Deleted Alerts");});
-    //Alert.findByIdAndRemove({createdId:req.body.id},function(){console.log("USER ALERTS DELETED")});
-
-    //Alert.find({createdId:req.body.Id},function(err,docs){
-    //    docs.forEach(function(docs){
-    //        docs.remove();
-    //    });
-    //});
-
-
     res.send(200);
 });
 
