@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="44d080e1-c248-4e18-b0fc-5fa6799b8878" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/Login/login.hbs" afterPath="$PROJECT_DIR$/views/Login/login.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Heroku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +48,8 @@
       <file leaf-file-name="login.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/Login/login.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5820225">
-              <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.60674155">
+              <caret line="18" column="87" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -67,7 +68,7 @@
       <file leaf-file-name="register.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/Login/register.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-30.0">
               <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
               <folding />
             </state>
@@ -627,12 +628,12 @@
       <workItem from="1447106858565" duration="6080000" />
       <workItem from="1447369573000" duration="7524000" />
       <workItem from="1447623443208" duration="1788000" />
-      <workItem from="1447806500027" duration="1618000" />
+      <workItem from="1447806500027" duration="1796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69270000" />
+    <option name="totallyTimeSpent" value="69448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -992,14 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/Login/register.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1040,6 +1033,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/Login/register.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.0">
+          <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
@@ -1050,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/Login/login.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5820225">
-          <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.60674155">
+          <caret line="18" column="87" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
           <folding />
         </state>
       </provider>
