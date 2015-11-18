@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/views/Login/login.hbs">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.7505618">
-              <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
+              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -627,12 +627,12 @@
       <workItem from="1447106858565" duration="6080000" />
       <workItem from="1447369573000" duration="7524000" />
       <workItem from="1447623443208" duration="1788000" />
-      <workItem from="1447806500027" duration="1364000" />
+      <workItem from="1447806500027" duration="1465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69016000" />
+    <option name="totallyTimeSpent" value="69117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="830" extended-state="6" />
@@ -1051,7 +1051,7 @@
     <entry file="file://$PROJECT_DIR$/views/Login/login.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7505618">
-          <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding />
         </state>
       </provider>
