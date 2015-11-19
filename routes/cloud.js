@@ -216,7 +216,8 @@ router.post('/receiveEvent', function(req,res,next){
         });
     }else{
         //User.find({city:eventCity,state: eventState},function(err,user){
-        User.find({city:new RegExp('^'+eventCity, "i"),state: new RegExp('^'+eventState, "i")},function(err,user){
+        //User.find({city:new RegExp('^'+eventCity, "i"),state: new RegExp('^'+eventState, "i")},function(err,user){
+        User.find({$or: [{city:new RegExp('^'+eventCity, "i")}, {currentLocation:new RegExp('^'+eventCity, "i")}],state: new RegExp('^'+eventState, "i")},function(err,user){
             if(user){
                 user.forEach(function(user){
                     var newEventNotification = new EventNotification ({
