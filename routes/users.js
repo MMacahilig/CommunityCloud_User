@@ -97,25 +97,7 @@ router.get('/mobilelogin', function(req,res,next) {
   res.send(200);
 
 });
-//
-//router.get('/pass', function(req,res,next){
-//  vm = {
-//    status: 200,
-//    id: req.user._id,
-//    firstName: req.user.firstName,
-//    lastName: req.user.lastName,
-//    email: req.user.email,
-//    address:  req.user.email,
-//    city: req.user.city,
-//    postcode: req.user.postcode,
-//    state: req.user.state,
-//    homePhone: req.user.homePhone,
-//    mobilePhone: req.user.mobilePhone,
-//    created: req.user.created
-//
-//  }
-//  res.send(vm);
-//});
+
 router.get('/pass', function(req,res,next){
   console.log("pass: " + req.user._id);
   EventNotification.find({UserId: req.user._id}).lean().exec(function(err,docs) {

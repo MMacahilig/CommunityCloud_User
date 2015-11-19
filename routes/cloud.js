@@ -57,6 +57,11 @@ router.get('/', restrict, function(req, res, next) {
                 });
             }
         });
+
+        User.findOneAndUpdate({_id:req.user._id},{currentLocation:""},function(err,docs){
+            console.log(err);
+        });
+
     });
 
 });
