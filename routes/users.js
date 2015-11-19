@@ -21,7 +21,6 @@ router.get('/', function (req, res, next) {
  * Also updates old entry if there is an old record inputted by user
  */
 router.get('/details', function (req, res, next) {
-
   res.render('users/details');
 });
 
