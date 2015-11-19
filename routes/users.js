@@ -100,7 +100,7 @@ router.get('/mobilelogin', function(req,res,next) {
 
 router.get('/pass', function(req,res,next){
   console.log("pass: " + req.user._id);
-  EventNotification.find({UserId: req.user._id}).lean().exec(function(err,docs) {
+  EventNotification.find({UserId: req.user._id,dismissed:false}).lean().exec(function(err,docs) {
     var alertString = [];
     var queryString = "[";
     var i = 0;
