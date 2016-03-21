@@ -122,3 +122,19 @@
             console.log("saved");
         });
     });
+    $('#form-register').validate({
+            rules:{
+                password:{
+                    required: true,
+                    minlength: 6
+                },
+                passwordConfirmation: {
+                    equalTo: '#password'
+                }
+            },
+            messages:{
+                passwordConfirmation: {
+                    equalTo: 'Passwords doesn\'t match'
+                }
+            }
+        });
