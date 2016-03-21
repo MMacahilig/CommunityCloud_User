@@ -1,4 +1,3 @@
-$(document).ready(function() {
 
     $("#deleteEvents").click(function() {
         var userId = $("#userID").html();
@@ -138,4 +137,3 @@ $(document).ready(function() {
                 }
             }
         });
-}
