@@ -1,150 +1,81 @@
-<div class="wrapper register-container">
-
-    <header class="main-header">
-
-        <!-- Logo -->
-        <a href="/" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">Community Cloud</span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">Community Cloud</span>
-        </a>
-
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
-
-
-        </nav>
-    </header>
-    <!-- Left side column. contains the logo and sidebar -->
-
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Community Cloud Registration
-
-            </h1>
-
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
-            {{#if error}}
-                <div class="alert alert-danger" role="alert">{{error}}</div>
-            {{/if}}
-            <form id="form-register" class="p-t-15" role="form" name="create-user-form" method="post" novalidate>
-                <div class="col-md-6">
-                    <h3>Login Details</h3>
-
-                    <div class="form-group">
-                        <label for="userEmail">Email address</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{input.email}}">
-                    </div>
-
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="form-group form-group-default">
-                            <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Passwords should match" name="password" value="{{input.password}}" required>
-                          </div>
+<div class="register-container full-height sm-p-t-30">
+    <div class="container-sm-height full-height">
+        <div class="row row-sm-height">
+            <div class="col-sm-12 col-sm-height col-middle">
+                <img src="../images/logo.png" alt="logo" data-src="../images/logo.png" data-src-retina="../images/logo_2x.png" width="78" height="22">
+                <h3>Please Enter Your Details</h3>
+                {{#if error}}
+                    <div class="alert alert-danger" role="alert">{{error}}</div>
+                {{/if}}
+                <form id="form-register" class="p-t-15" role="form" name="create-user-form" method="post" novalidate>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group form-group-default">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="John" name="firstName" value="{{input.firstName}}" required>
+                            </div>
                         </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="form-group form-group-default">
-                            <label>Password Confirmation</label>
-                            <input type="password" class="form-control" placeholder="Confirm Password" name="passwordConfirmation" value="{{input.confirmPassword}}" required>
-                          </div>
+                        <div class="col-sm-6">
+                            <div class="form-group form-group-default">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" placeholder="Smith" name="lastName" value="{{input.lastName}}" required>
+                            </div>
                         </div>
-                      </div>
-
                     </div>
-
-
-                    <h3>User Details</h3>
-                    <div class="form-group">
-                        <label for="userFirstName">First Name</label>
-                        <input type="text" class="form-control" id="userFirstName"name="firstName" placeholder="First Name" value="{{input.firstName}}" required>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group form-group-default">
+                                <label>Koneqt User name</label>
+                                <input type="text" class="form-control" placeholder="john (this can be changed later)" name="username" value="{{input.username}}" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="userLastName">Last Name</label>
-                        <input type="text" class="form-control" id="userLastName" name="lastName" placeholder="Last Name" value="{{input.lastName}}" required>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group form-group-default">
+                                <label>Email</label>
+                                <input type="email" name="email" id="email" placeholder="john@smith.com" class="form-control" required value="{{input.email}}" required>
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-
-                <div class="col-md-6">
-                    <h4>Contact Details</h4>
-
-                    <div class="form-group">
-                        <label for="userHomePhone">Home Phone</label>
-                        <input type="text" class="form-control" id="userHomePhone" name="homePhone" maxlength="10" placeholder="Home Phone Number" value="{{input.homePhone}}" required>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group form-group-default">
+                                <label>Role</label>
+                                <select class="full-width" data-placeholder="Client or Samaritan" data-init-plugin="select2" id="role" name="role" value="{{input.role}}" required>
+                                    <option value=""></option>
+                                    <option value="Client">Client</option>
+                                    <option value="Samaritan">Samaritan</option>
+                                </select>
+                            </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="userMobilePhone">Mobile Phone</label>
-                        <input type="text" class="form-control" id="userMobilePhone" name="mobilePhone" maxlength="10" placeholder="Mobile Phone Number" value="{{input.mobilePhone}}" required>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group form-group-default">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="Passwords should match" name="password" value="{{input.password}}" required>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="userAddress">Home Address</label>
-                        <input type="text" class="form-control" id="userAddress" name="address" placeholder="Number and Street" value="{{input.address}}" required>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group form-group-default">
+                                <label>Password Confirmation</label>
+                                <input type="password" class="form-control" placeholder="Confirm Password" name="passwordConfirmation" value="{{input.confirmPassword}}" required>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="userCity">City</label>
-                        <input type="text" class="form-control" id="userCity" name="city"  placeholder="City or Suburb" value="{{input.city}}" required>
+                    <div class="row m-t-10">
+                        <div class="col-md-6">
+                            <p>I agree to the <a href="#" class="text-info small">Pages Terms</a> and <a href="#" class="text-info small">Privacy</a>.</p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <a href="#" class="text-info small">Help? Contact Support</a>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="userPostCode">Postcode</label>
-                        <input type="text" class="form-control" id="userPostCode" name="postcode" maxlength="4" placeholder="e.g. 2000" value="{{input.postcode}}" required>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="userState">State</label>
-                        <select class="form-control" id="userState" name="state" value="{{input.state}}">
-                            <option value="NSW">NSW</option>
-                            <option value="ACT">ACT</option>
-                            <option value="QLD">QLD</option>
-                            <option value="NT">NT</option>
-                            <option value="SA">SA</option>
-                            <option value="WA">WA</option>
-                            <option value="TAS">TAS</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </div>
-
-
-
-
-            </form>
-        </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
-
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.0
+                    <button class="btn btn-primary btn-cons m-t-10" type="submit">Create a new account</button>
+                </form>
+            </div>
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-    </footer>
-
-    <!-- Control Sidebar -->
-
-
-
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-
-</div><!-- ./wrapper -->
+    </div>
+</div>
