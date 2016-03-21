@@ -137,30 +137,12 @@ router.post('/alert', function(req, res, next) {
     //res.redirect('/');
 });
 
+/**
+ * This post will save a receivt event message
+ */
 
 router.post('/receiveEvent', function(req,res,next){
 
-
-    //req.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
-    //
-    //// Request methods you wish to allow
-    //req.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    //
-    //// Request headers you wish to allow
-    //req.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    //
-    //// Set to true if you need the website to include cookies in the requests sent
-    //// to the API (e.g. in case you use sessions)
-    //req.setHeader('Access-Control-Allow-Credentials', true);
-
-    //res.setHeader('Access-Control-Allow-Origin', 'http://emergencyservicecloud.herokuapp.com');
-    //
-    //// Request methods you wish to allow
-    //res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    //
-    //// Request headers you wish to allow
-    //res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    //res.setHeader('Access-Control-Allow-Credentials', true);
 
 
     var newEvent = new Event({
@@ -247,6 +229,9 @@ router.post('/receiveEvent', function(req,res,next){
 
 });
 
+/**
+ * generates the contact form
+ */
 router.get('/addcontact', function(req, res, next) {
     var startDate = new Date(req.user.created);
     var dateString = startDate.getDate() + "/" + startDate.getMonth() + "/" + startDate.getYear();
@@ -259,6 +244,9 @@ router.get('/addcontact', function(req, res, next) {
     res.render('contact',vm);
 });
 
+/**
+ * generates a contact record and stores it onto the database
+ */
 router.post('/addcontact', function(req, res, next) {
 
     var newContact = new Contact({
@@ -281,7 +269,9 @@ router.post('/addcontact', function(req, res, next) {
     res.redirect('/');
 });
 
-
+/**
+ * This stores the alert received from the mobile
+ */
 
 router.post('/mobileAlert', function(req, res, next) {
     console.log("trigger");
@@ -302,7 +292,7 @@ router.post('/mobileAlert', function(req, res, next) {
     newAlert.save(function (err) {
         if(err){
             console.log(err);
-            return next(err);
+            //return next(err);
         }
         next(null);
     });
@@ -311,6 +301,9 @@ router.post('/mobileAlert', function(req, res, next) {
 
 });
 
+/**
+ * this deletes all events in database
+ */
 router.delete('/deleteEvents', function(req, res, next) {
 
     EventNotification.remove({},function(){console.log("Deleted Notifications");});
@@ -318,12 +311,18 @@ router.delete('/deleteEvents', function(req, res, next) {
     res.send(200);
 });
 
+/**
+ * this deletes all alerts in the database
+ */
 router.delete('/deleteAlerts', function(req, res, next) {
     console.log("id: " + req.body.id);
     Alert.remove({createdId:req.body.id},function(){console.log("Deleted Alerts");});
     res.send(200);
 });
 
+/**
+ * raspberry Refresh()
+ */
 router.get('/getuserevents', function(req,res,next){
 
     EventNotification.find({UserId: req.query.id,dismissed: false}).lean().exec(function(err,docs) {
@@ -393,6 +392,9 @@ router.get('/geteventnotif',function(req,res,next){
     });
 });
 
+/**
+ * saves an alert sent from the raspberry pi
+ */
 router.post('/pialert', function(req,res,next){
     var newAlert = new Alert({
         alertType: req.body.alertType,
@@ -418,6 +420,9 @@ router.post('/pialert', function(req,res,next){
     res.send(JSON.stringify(req.body));
 });
 
+/**
+ * updates user location
+ */
 router.put('/setlocation', function(req,res,next){
     var id = req.body.id;
 
@@ -428,7 +433,9 @@ router.put('/setlocation', function(req,res,next){
     res.send(200);
 });
 
-
+/**
+ * refreshAndroid()
+ */
 router.get('/refreshmobile',function(req,res,next){
     console.log(req.query);
     EventNotification.find({UserId: req.query.id,dismissed:false}).lean().exec(function(err,docs) {
