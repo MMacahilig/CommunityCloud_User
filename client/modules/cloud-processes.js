@@ -64,7 +64,7 @@
         console.log(rating);
 
         $.ajax({
-            url:"http://communitycloud.herokuapp.com/cloud/alert",
+            url:"https://communitycloud.herokuapp.com/cloud/alert",
             type: "POST",
             data: {
                 alertType: AlertType,
@@ -94,7 +94,7 @@
         });
 
         $.ajax({
-            url:"http://emergencyservicecloud.herokuapp.com/cloud/receiveAlert",
+            url:"https://emergencyservicecloud.herokuapp.com/cloud/receiveAlert",
             type: "POST",
             crossDomain: true,
             xhrFields: {
@@ -137,7 +137,7 @@
         var eventId = $(this).parent().parent().find("#eventId").text();
         $(this).parent().parent().fadeOut();
         $.ajax({
-            url:"http://communitycloud.herokuapp.com/cloud/dismissevent",
+            url:"https://communitycloud.herokuapp.com/cloud/dismissevent",
             type: "PUT",
             data: {
                 id:userId,
