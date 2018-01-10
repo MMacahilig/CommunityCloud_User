@@ -51,7 +51,7 @@
 
     });
     $("#sendAlert").click(function(){
-        console.log("Event Sent");
+        //console.log("Event Sent");
         var AlertType = $("#alertType").val();
         var detail = $("#alertDetails").val();
         var userlocation = $("#location").val();
@@ -75,7 +75,20 @@
                 rating: rating,
                 createdBy: userName,
                 createdId: userId
-            }
+            },
+            statusCode: {
+                    0: function() {
+                        //Success message
+                        console.log("sent")
+                    },
+                    200: function() {
+                        //Success Message
+                        console.log("sent")
+                    }
+                },
+                xhrFields: {
+                    withCredentials: true
+                }
         }).done(function(){
             console.log("saved");
         });
@@ -96,7 +109,20 @@
                 rating: rating,
                 createdBy: userName,
                 createdId: userId
-            }
+            },
+            statusCode: {
+                    0: function() {
+                        //Success message
+                        console.log("sent")
+                    },
+                    200: function() {
+                        //Success Message
+                        console.log("sent")
+                    }
+                },
+                xhrFields: {
+                    withCredentials: true
+                }
         }).done(function(){
             console.log("SENT!");
             console.log("Before Reload");
