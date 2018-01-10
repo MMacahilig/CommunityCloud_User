@@ -51,7 +51,7 @@
 
     });
     $("#sendAlert").click(function(){
-        //console.log("Event Sent");
+        console.log("Event Sent");
         var AlertType = $("#alertType").val();
         var detail = $("#alertDetails").val();
         var userlocation = $("#location").val();
