@@ -1,4 +1,4 @@
-# CommunityCloud_User
+# CommunityCloud User
 As part of my Capstone Project for UTS I created the Community Cloud project to connect neighbourhoods togehter.
 
 The Community Cloud is a cloud social application that connects users within the same neighbourhood togehter along with emergency services for the surrounding neighbourhood.
